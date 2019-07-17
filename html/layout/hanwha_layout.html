@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Hanwha레이아웃</title>
+		<style>
+			*{margin: 0; padding: 0;}
+			/*width 100%는 기본값이라 안써도 됨*/
+			/*#wrap {width: 100%; }
+			#header {width: 100%;}*/
+			#header_nav {height: 118px; background-color: #fbe9e7;}
+			#header_banner {height: 552px; background-color: #ffccbc;}
+			/*#contents {width: 100%;}*/
+			#content1 {height: 823px; background-color: #ffab91;}
+			#content2 {height: 435px; background-color: #ff8a65;}
+			#content3 {height: 603px; background-color: #ff7043;}
+			/*#footer {width: 100%; }*/
+			#footer1 {height: 393px; background-color: #ff5722;}
+			#footer2 {height: 92px; background-color: #e64a19;}
+			.container {width: 1299px; height: inherit; background-color: rgba(0,0,0,0.5); margin: 0 auto;}
+
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<div id="header_nav">
+					<div class="container"></div>
+				</div>
+				<div id="header_banner">
+					<div class="container"></div>
+				</div>
+			</div>
+			<div id="contents">
+				<div id="content1">
+					<div class="container"></div>
+				</div>
+				<div id="content2"></div>
+				<div id="content3">
+					<div class="container"></div>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="footer1">
+					<div class="container"></div>
+				</div>
+				<div id="footer2">
+					<div class="container"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

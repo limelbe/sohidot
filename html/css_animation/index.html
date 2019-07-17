@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="sohinggu">
+        <meta name="description" content="css, animation, css-animation">
+        <meta name="keywords" content="css, animation, css-animation">
+        <title>CSS-ANIMATION</title>
+        <!-- web_font -->
+        <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+        <!-- css -->
+        <link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+        <link href="../assets/css/custom.css" rel="stylesheet">
+        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/prism.css" rel="stylesheet">
+        <!-- Prettify -->
+        <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+        <!-- Icon -->
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+        <link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+        <!-- hmlt5 support -->
+        <!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+        <!-- IE6,7 support -->
+        <!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+        <!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+        <!--[if lte IE 6]>
+        <p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+                사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+                <a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+                <a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a>
+                <a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+                <a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+                <a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+            <![endif]-->
+            <style>
+            .face {display:block; margin:20px auto; width:400px; }
+            .face img {width:400px; border-radius:50%; }
+            .face1 img {width:22%; border-radius:10%; margin:1%;}
+            .member {margin:50px 0;}
+            .member li {width:150px; list-style:none; display:inline-block; margin:6px; }
+            .member li img { border-radius:50%;}
+            table em {border: 1px solid #000; font-style: normal; font-size: 80%; padding: 3px; border-radius: 3px; background:#fff; color: #333;}
+            
+            .find {font-size: 15px; color: #fff; border-left: 3px solid #4aa8d4; padding-left: 5px; background-color: #4aa8d4; width: 18px}
+            h2 {font-weight: 400; }
+            </style>
+        </head>
+        <body>
+            <!-- nav -->
+            <div id="top-nav" class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right">
+                                <li><a href="#">sohi</a></li>
+                                <li><a href="#">reference</a></li>
+                                <li><a href="#">tutorial</a></li>
+                                <li><a href="#">css</a></li>
+                                <li><a href="#">html</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //nav -->
+            <!-- header -->
+            <div id="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12" style="text-align:center;">
+                            <div class="header_tit">
+                                <h1>Professional web publishers</h1>
+                                <h2><a href="http://webstoryboy.co.kr">webstoryboy.co.kr</a></h2>
+                            </div>
+                            <div class="header_icon" id="wow">
+                                <ul>
+                                    <li class="icon_tit1"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+                                    <li class="icon_tit2"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+                                    <li class="icon_tit3"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+                                    <li class="icon_tit4"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //header -->
+            <!-- contents -->
+            <div class="container" style="margin-top:20px;">
+                <div class="row-fluid">
+                    <div class="span12">
+                    
+                    <h1>Animation</h1>
+
+                    <br>
+                    <h2>animation</h2>
+                    <div class="well">animation : {name} {duration} {timing-function} {delay} {iteration-count} {direction} {fill-mode} {play-state}</div>
+
+                    <table class="table table-stripid table-border table-hover">
+                        <thead>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>animation-name</td>
+                                <td>@keyframes에 지정된 이름을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-duration</td>
+                                <td>애니메이션이 실행되는 시간을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-timing-function</td>
+                                <td>애니메이션 키프레임 움직임을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-delay</td>
+                                <td>애니메이션이 로드된 후 애니메이션이 다시 시작될 때까지의 시간을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-iteration-count</td>
+                                <td>애니메이션이 반복되는 횟수를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-direction</td>
+                                <td>애니메이션의 움직임 방향을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-fill-mode</td>
+                                <td>애니메이션이 끝난 후에 상태를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>animation-play-state</td>
+                                <td>애니메이션의 진행 상태를 설정합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br>
+                    <h2>timing-function</h2>
+                    <table class="table table-stripid table-border table-hover">
+                        <thead>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>liner</td>
+                                <td>일정한 간격으로 움직입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>ease</td>
+                                <td>처음에 가속하고 마지막 부분에서 급격히 감소합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>ease-in</td>
+                                <td>처음에 천천히 시작하고 마지막 부분에서 가속합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>ease-out</td>
+                                <td>처음에 최대 속도로 시작하고 마지막에 감속합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>ease-in-out</td>
+                                <td>처음에는 제로 속도에서 시작하고 중간 지점에서 최고 속도로 움직이다가 마지막 부분에서 서서히 감속합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>step-start</td>
+                                <td>애니메이션이 시작점에서만 표현됩니다.</td>
+                            </tr>
+                            <tr>
+                                <td>step-end</td>
+                                <td>애니메이션이 끝점에서만 표현됩니다.</td>
+                            </tr>
+                            <tr>
+                                <td>steps(ints, start/end)</td>
+                                <td>애니메이션을 단계별로 표현합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>cubic-bezier(n,n,n,n)</td>
+                                <td>베지어 곡선 값을 만들어서 속도를 설정합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br>
+                    <h2>transition</h2>
+                    <div class="well">transiton : {property} {duration} {timing-function} {dealy}</div>
+                    <table class="table table-stripid table-border table-hover">
+                        <thead>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>transiton-property</td>
+                                <td>트랜지션을 적용할 css 속성 대상을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>transiton-duration</td>
+                                <td>트랜지션의 작동 시간을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>transiton-timing-function</td>
+                                <td>트랜지션의 움직임 효과를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>transtion-delay</td>
+                                <td>트랜지션이 시작되기 전 대기시간을 설정합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        
+                    <style>
+                        .box > div {width: 60px; height: 60px; line-height: 60px; text-align: center; border-radius: 50%; 
+                        color: #fff; font-size: 12px; position: relative; overflow: hidden; margin: 10px;
+                        background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);}
+                        .btn {color: #fff; background-image: linear-gradient(90deg, #2af598 0%, #009efd 100%);}
+                        .box1 > div.timing1 {
+                            /* animation: move1 2s 10 linear; */
+                            animation-name: move1;
+                            animation-duration: 2s;
+                            animation-iteration-count: 10;
+                            animation-timing-function: linear;
+                        }
+                        @keyframes move1 {
+                            0% {left: 0%;}
+                            50% {left: calc(100% - 70px);}
+                            100% {left: 0%;}
+                        }
+                        .box1 > div.timing2 {
+                            animation-name: move1;
+                            animation-duration: 2s;
+                            animation-iteration-count: 10;
+                            animation-timing-function: ease;
+                        }
+                        .box1 > div.timing3 {
+                            animation-name: move1;
+                            animation-duration: 2s;
+                            animation-iteration-count: 10;
+                            animation-timing-function: ease-in;
+                        }
+
+                        .box1 > div.timing4 {
+                            animation-name: move1;
+                            animation-duration: 2s;
+                            animation-iteration-count: 10;
+                            animation-timing-function: ease-out;
+                        }
+                        .box1 > div.timing5 {
+                            animation-name: move1;
+                            animation-duration: 2s;
+                            animation-iteration-count: 10;
+                            animation-timing-function: ease-in-out;
+                        }
+                    </style>
+                    <br>
+                    <h3>Animation-timing-function <a href="#c" class="btn btn1">Start</a></h3>
+                    <div class="well">
+                        <div class="box box1">
+                            <div>linear</div>
+                            <div>ease</div>
+                            <div>ease-in</div>
+                            <div>ease-out</div>
+                            <div>ease-in-out</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.box1 > div.timing1 {animation: move1 2s 10 linear;}
+.box1 > div.timing2 {animation: move1 2s 10 ease;}
+.box1 > div.timing3 {animation: move1 2s 10 ease-in;}
+.box1 > div.timing4 {animation: move1 2s 10 ease-out;}
+.box1 > div.timing5 {animation: move1 2s 10 ease-in-out;}
+
+@keyframes move1 {
+    0% {left: 0%;}
+    50% {left: calc(100% - 70px);}
+    100% {left: 0%;}
+}</code></pre>
+
+                    
+                    <style>
+                    .box2 > div {background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);}
+                    .box2 > div.timing6 {animation: move1 3s 10 step-start;}
+                    .box2 > div.timing7 {animation: move1 3s 10 step-end;}
+                    .box2 > div.timing8 {animation: move1 3s 10 steps(4, start);}
+                    .box2 > div.timing9 {animation: move1 3s 10 steps(4, end);}
+                    .box2 > div.timing10 {animation: move1 3s 10 steps(10, start);}
+                    .box2 > div.timing11 {animation: move1 3s 10 steps(10, end);}
+}
+                    </style>
+                    <br>
+                    <h3>Animation-timing-function : step <a href="#c" class="btn btn2">Start</a></h3>
+                    <div class="well">
+                        <div class="box box2">
+                            <div>step-start</div>
+                            <div>step-end</div>
+                            <div>steps(4, start)</div>
+                            <div>steps(4, end)</div>
+                            <div>steps(10, start)</div>
+                            <div>steps(10, end)</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.box2 > div {background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);}
+.box2 > div.timing6 {animation: move1 3s 10 step-start;}
+.box2 > div.timing7 {animation: move1 3s 10 step-end;}
+.box2 > div.timing8 {animation: move1 3s 10 steps(4, start);}
+.box2 > div.timing9 {animation: move1 3s 10 steps(4, end);}
+.box2 > div.timing10 {animation: move1 3s 10 steps(10, start);}
+.box2 > div.timing11 {animation: move1 3s 10 steps(10, end);}
+
+@keyframes move1 {
+    0% {left: 0%;}
+    50% {left: calc(100% - 70px);}
+    100% {left: 0%;}
+}</code></pre>
+
+                    <style>
+                    .box3 > div {background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);}
+                    .box3 > div.timing12 {animation: move1 3s 10 cubic-bezier(1, 0.01, 0, 0.99);}
+                    .box3 > div.timing13 {animation: move1 3s 10 cubic-bezier(1, 1.6, 0,-0.63);}
+                    .box3 > div.timing14 {animation: move1 3s 10 cubic-bezier(0, 2.72, 1,-1.48);}
+                    .box3 > div.timing15 {animation: move1 3s 10 cubic-bezier(0.05,-0.29, 1,-0.64);}
+                    .box3 > div.timing16 {animation: move1 3s 10 cubic-bezier(0, 0.84, 1,-0.05);}
+                    </style>
+                    <br>
+                    <h3>Animation-timing-function : cubic-bezier <a href="#c" class="btn btn3">Start</a></h3>
+                    <div class="well">
+                        <div class="box box3">
+                            <div>cubic1</div>
+                            <div>cubic2</div>
+                            <div>cubic3</div>
+                            <div>cubic4</div>
+                            <div>cubic5</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.box3 > div {background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);}
+.box3 > div.timing12 {animation: move1 3s 10 cubic-bezier(1, 0.01, 0, 0.99);}
+.box3 > div.timing13 {animation: move1 3s 10 cubic-bezier(1, 1.6, 0,-0.63);}
+.box3 > div.timing14 {animation: move1 3s 10 cubic-bezier(0, 2.72, 1,-1.48);}
+.box3 > div.timing15 {animation: move1 3s 10 cubic-bezier(0.05,-0.29, 1,-0.64);}
+.box3 > div.timing16 {animation: move1 3s 10 cubic-bezier(0, 0.84, 1,-0.05);}
+
+@keyframes move1 {
+    0% {left: 0%;}
+    50% {left: calc(100% - 70px);}
+    100% {left: 0%;}
+}</code></pre>
+
+                    <style>
+                    .box4 > div {background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);}
+                    .box4 > div.timing17 {animation: move1 3s 0.1s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+                    .box4 > div.timing18 {animation: move1 3s 0.2s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+                    .box4 > div.timing19 {animation: move1 3s 0.3s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+                    .box4 > div.timing20 {animation: move1 3s 0.4s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+                    .box4 > div.timing21 {animation: move1 3s 0.5s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+                    </style>
+                    <br>
+                    <h3>Animation-delay <a href="#c" class="btn btn4">Start</a></h3>
+                    <div class="well">
+                        <div class="box box4">
+                            <div>delay</div>
+                            <div>delay</div>
+                            <div>delay</div>
+                            <div>delay</div>
+                            <div>delay</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.box4 > div.timing17 {animation: move1 3s 0.1s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+.box4 > div.timing18 {animation: move1 3s 0.2s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+.box4 > div.timing19 {animation: move1 3s 0.3s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+.box4 > div.timing20 {animation: move1 3s 0.4s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+.box4 > div.timing21 {animation: move1 3s 0.5s 10 cubic-bezier(0.76, 0.85, 1, 0.25)}
+
+@keyframes move1 {
+    0% {left: 0%;}
+    50% {left: calc(100% - 70px);}
+    100% {left: 0%;}
+}</code></pre>
+
+
+                    <style>
+                        .box5 > div {background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);}
+                        .box5 {height: 500px;}
+                        .box5 div.normal {animation: move2 3s 10 ease normal;}
+                        .box5 div.reverse {animation: move2 3s 10 ease reverse;}
+                        .box5 div.alternate {animation: move2 3s 10 ease alternate;}
+                        .box5 div.alternate-reverse {animation: move2 3s 10 ease alternate-reverse;}
+
+                        @keyframes move2 {
+                            0% {left: 0; top: 0;}
+                            25% {left: calc(100% - 70px); top: 0;}
+                            50% {left: calc(100% - 70px); top: calc(100% - 70px);}
+                            75% {left: 0; top: calc(100% - 70px);}
+                            100% {left: 0; top: 0;}
+                        }
+                    </style>
+                    <br>
+                    <h3 class="btn5">animation-direction
+                        <a href="#c" class="btn btn5-1">normal</a>
+                        <a href="#c" class="btn btn5-2">reverse</a>
+                        <a href="#c" class="btn btn5-3">alternate</a>
+                        <a href="#c" class="btn btn5-4">alternate-reverse</a>
+                    </h3>
+                    <div class="well">
+                        <div class="box box5">
+                            <div>direction</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.box5 div.normal {animation: move2 3s 10 ease normal;}
+.box5 div.reverse {animation: move2 3s 10 ease reverse;}
+.box5 div.alternate {animation: move2 3s 10 ease alternate;}
+.box5 div.alternate-reverse {animation: move2 3s 10 ease alternate-reverse;}
+
+@keyframes move2 {
+    0% {left: 0; top: 0;}
+    25% {left: calc(100% - 70px); top: 0;}
+    50% {left: calc(100% - 70px); top: calc(100% - 70px);}
+    75% {left: 0; top: calc(100% - 70px);}
+    100% {left: 0; top: 0;}
+}</code></pre>
+
+
+                    <style>
+                    .box6 > div {background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);}
+                    .box6 > div.timing22 {animation: move3 3s 1 ease none;}
+                    .box6 > div.timing23 {animation: move3 3s 1 ease forwards;}
+                    .box6 > div.timing24 {animation: move3 3s 1 ease backwards;}
+                    .box6 > div.timing25 {animation: move3 3s 1 ease both;}
+
+                    @keyframes move3 {
+                        0% {left: 0%;}
+                        100% {left: calc(100% - 70px);}
+                    }
+                    </style>
+                    <br>
+                    <h3>animation-fillmode <a href="#c" class="btn btn6">Start</a></h3>
+                    <div class="well">
+                        <div class="box box6">
+                            <div>none</div>
+                            <div>forwards</div>
+                            <div>backwards</div>
+                            <div>both</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.box6 > div.timing22 {animation: move3 3s 1 ease none;}
+.box6 > div.timing23 {animation: move3 3s 1 ease forwards;}
+.box6 > div.timing24 {animation: move3 3s 1 ease backwards;}
+.box6 > div.timing25 {animation: move3 3s 1 ease both;}
+
+@keyframes move3 {
+    0% {left: 0%;}
+    100% {left: calc(100% - 70px);}
+}</code></pre>
+
+                    <style>
+                    .box7 > div {background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);}
+                    .box7 > div.timing26 {animation: move1 1s ease 1;}
+                    .box7 > div.timing27 {animation: move1 1s ease 2;}
+                    .box7 > div.timing28 {animation: move1 1s ease 3;}
+                    .box7 > div.timing29 {animation: move1 1s ease infinite;}
+                    </style>
+                    <br>
+                    <h3>animation-iteration-count <a href="#c" class="btn btn7">Start</a></h3>
+                    <div class="well">
+                        <div class="box box7">
+                            <div>count1</div>
+                            <div>count2</div>
+                            <div>count3</div>
+                            <div>infinite</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.box7 > div.timing26 {animation: move1 1s ease 1;}
+.box7 > div.timing27 {animation: move1 1s ease 2;}
+.box7 > div.timing28 {animation: move1 1s ease 3;}
+.box7 > div.timing29 {animation: move1 1s ease infinite;}</code></pre>
+                    
+                    
+                    
+                    <style>
+                        .box8 > div {background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);}
+                        .box8 {height: 300px;}
+                        .box8 > div.running {animation: move2 3s 10 ease running;}
+                        .box8 > div.paused {animation: move2 3s 10 ease paused;}
+                    </style>
+                    <br>
+                    <h3 class="btn8">animation-play-state 
+                        <a href="#c" class="btn">running</a>
+                        <a href="#c" class="btn">paused</a>                    
+                    </h3>
+                    <div class="well">
+                        <div class="box box8">
+                            <div>state</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.box8 {height: 300px;}
+.box8 > div.running {animation: move2 3s 10 ease running;}
+.box8 > div.paused {animation: move2 3s 10 ease paused;}</code></pre>
+
+                    <style>
+                    .box9 > div {background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        width: 140px; height: 140px; line-height: 140px; text-align: center; float: left; margin: 40px;}
+                    .box9 > div.bounce {animation: bounce 1s 10 ease;}
+                    .box9 > div.bubberBand {animation: bubberBand 1s 10 ease;
+                        background: url(https://images.unsplash.com/photo-1534278931827-8a259344abe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80); background-size: cover;}
+                    .box9 > div.tada {animation: tada 1s 10 ease;}
+                    .box9 > div.bounceInLeft {animation: bounceInLeft 1s 10;}
+                    .box9 > div.wobble {animation: wobble 1s 10;}
+                    .box9 > div.flip {backface-visibility: visible; animation: flip 1s 10;}
+                    .box9 > div.rotateInUpLeft {animation: rotateInUpLeft 1s 10;}
+                    .box9 > div.lightSpeedOut {animation: lightSpeedOut 1s 10 ease-in;}
+                    .box9 > div.hinge {animation: hinge 2s 10;}
+                    .box9 > div.complex {animation: complex 6s 10; transform-origin: center; backface-visibility: visible;}
+
+                    @keyframes bounce {
+                        0%, 20%, 53%, 80%, 100% {
+                            transform: translate3d(0,0,0);
+                            animation-timing-function: cubic-bezier(0.215, 0.61, 0.35, 1);
+                        }
+
+                        40%, 43% {
+                            transform: translate3d(0,-30px,0);
+                            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                        }
+
+                        70% {
+                            transform: translate3d(0,-15px,0);
+                            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                        }
+
+                        90% {
+                            transform: translate3d(0,-4px,0);
+                        }
+                    }
+
+                    @keyframes bubberBand {
+                        0%   {transform: scale3d(1,1,1)}
+                        30%  {transform: scale3d(1.25,0.75,1)}
+                        40%  {transform: scale3d(0.75,1.25,1)}
+                        50%  {transform: scale3d(1.15,0.85,1)}
+                        65%  {transform: scale3d(0.95,1.05,1)}
+                        75%  {transform: scale3d(1.05,1.95,1)}
+                        100% {transform: scale3d(1,1,1)}
+                    }
+
+
+                    @keyframes tada {
+                        0% {transform: scale3d(1, 1, 1);}
+                        10%, 20% {transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);}
+                        30%, 50%, 70%, 90% {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);}
+                        40%, 60%,80% {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);}
+                        100% {transform: scale3d(1, 1, 1);}
+                    }
+
+                    @keyframes bounceInLeft {
+                        0%, 60%, 75%, 90%, 100% {animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);}
+
+                        0% {opacity: 0; transform: translate3d(-3000px, 0, 0);}
+                        60% {opacity: 1; transform: translate3d(25px, 0, 0);}
+                        75% {transform: translate3d(-10px, 0, 0);}
+                        90% {transform: translate3d(5px, 0, 0);}
+                        100% {transform: translate3d(0, 0, 0);}
+                    }
+
+                    @keyframes wobble {
+                        0% {transform: translate3d(0, 0, 0);}
+                        15% {transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);}
+                        30% {transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);}
+                        45% {transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);}
+                        60% {transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);}
+                        75% {transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);}
+                        100% {transform: translate3d(0, 0, 0);}
+                    }
+
+                    @keyframes flip {
+                        0% {
+                            transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+                            animation-timing-function: ease-out;
+                        }
+                        40% {
+                            transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+                            rotate3d(0, 1, 0, -190deg);
+                            animation-timing-function: ease-out;
+                        }
+                        50% {
+                            transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+                            rotate3d(0, 1, 0, -170deg);
+                            animation-timing-function: ease-in;
+                        }
+                        80% {
+                            transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+                            rotate3d(0, 1, 0, 0deg);
+                            animation-timing-function: ease-in;
+                        }
+                        100% {
+                            transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+                            animation-timing-function: ease-in;
+                        }
+                    }
+
+                    @keyframes rotateInUpLeft {
+                        0% {transform-origin: left bottom; transform: rotate3d(0, 0, 1, 45deg); opacity: 0;}
+                        100% {transform-origin: left bottom; transform: translate3d(0, 0, 0); opacity: 1;}
+                    }
+
+                    @keyframes lightSpeedOut {
+                        0% {opacity: 1;}
+                        100% {transform: translate3d(100%, 0, 0) skewX(30deg); opacity: 0;}
+                    }
+
+                    @keyframes hinge {
+                        0% {transform-origin: top left; animation-timing-function: ease-in-out;}
+                        20%, 60% {transform: rotate3d(0, 0, 1, 80deg); transform-origin: top left; animation-timing-function: ease-in-out;}
+                        40%, 80% {transform: rotate3d(0, 0, 1, 60deg); transform-origin: top left; animation-timing-function: ease-in-out; opacity: 1;}
+                        100% {transform: translate3d(0, 700px, 0);  opacity: 0;}
+                    }
+
+                    @keyframes complex {
+                        0% {opacity: 0;}
+
+                        0%, 6%, 15.9%, 24%, 30% {
+                            transform: translate3d(0,0,0);
+                            animation-timing-function: cubic-bezier(0.215, 0.61, 0.35, 1);
+                        }
+
+                        12%, 12.9% {
+                            transform: translate3d(0,-100px,0);
+                            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                        }
+
+                        21% {
+                            transform: translate3d(0,-15px,0);
+                            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+                        }
+
+                        27% {
+                            transform: translate3d(0,-4px,0);
+                            opacity: 1;
+                        }
+
+                        0%, 33.33%, 60% {transform: translate3d(0, 0, 0);}
+                        36.66% {transform: skewX(-12.5deg) skewY(-12.5deg);}
+                        39.99% {transform: skewX(6.25deg) skewY(6.25deg);}
+                        43.33% {transform: skewX(-3.125deg) skewY(-3.125deg);}
+                        46.66% {transform: skewX(1.5625deg) skewY(1.5625deg);}
+                        49.99% {transform: skewX(-0.78125deg) skewY(-0.78125deg);}
+                        53.33% {transform: skewX(0.390625deg) skewY(0.390625deg);}
+                        56.66% {transform: skewX(-0.1953125deg) skewY(-0.1953125deg);}
+
+                        60% {
+                            transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+                            animation-timing-function: ease-out;
+                        } 
+                        68% {
+                            transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+                            rotate3d(0, 1, 0, -190deg);
+                            animation-timing-function: ease-out;
+                        }
+                        70% {
+                            transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+                            rotate3d(0, 1, 0, -170deg);
+                            animation-timing-function: ease-in;
+                        }
+                        76% {
+                            transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+                            rotate3d(0, 1, 0, 0deg);
+                            animation-timing-function: ease-in;
+                        }
+                        80% {
+                            transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+                            animation-timing-function: ease-in;
+                        }
+
+                        80%, 90% {transform: translate3d(0, 0, 0);}
+                        82%, 83%, 85%, 87%, 89% {transform: translate3d(-10px, 0, 0);}
+                        82%, 84%, 86%, 88% {transform: translate3d(10px, 0, 0);}
+
+                        91% {opacity: 1;}
+                        95% {opacity: 0; transform: scale3d(0.3, 0.3, 0.3);}
+                        100% {opacity: 0;}
+                    }
+
+                    </style>
+                    <br>
+                    <h3 class="btn9">Animate.css
+                        <a href="#c" class="btn">bounce</a>
+                        <a href="#c" class="btn">bubberBand</a>
+                        <a href="#c" class="btn">tada</a>
+                        <a href="#c" class="btn">bounceInLeft</a>
+                        <a href="#c" class="btn">wobble</a>
+                        <a href="#c" class="btn">flip</a>
+                        <a href="#c" class="btn">rotateInUpLeft</a>
+                        <a href="#c" class="btn">lightSpeedOut</a>
+                        <a href="#c" class="btn">hinge</a>
+                        <a href="#c" class="btn">complex</a>
+                    </h3>
+                    <div class="well">
+                        <div class="box box9 clearfix">
+                            <div>animate</div>
+                            <div>animate</div>
+                            <div>animate</div>
+                            <div>animate</div>
+                            <div>animate</div>
+                        </div>
+                    </div>
+
+
+
+                    <br>
+                    <h3>sample</h3>
+                    <p class="codepen" data-height="400" data-theme-id="0" data-default-tab="result" data-user="sohinggu" data-slug-hash="zVWmyJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animation Steps">
+                        <span>See the Pen <a href="https://codepen.io/sohinggu/pen/zVWmyJ/">
+                        Animation Steps</a> by sohinggu (<a href="https://codepen.io/sohinggu">@sohinggu</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+                    </div> 
+                    <!--//span12-->
+                </div>
+                <!--//row-fluid-->
+            </div>
+            <!-- //contents -->
+            <!-- //footer -->
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <h5>SOHINGGU</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //footer -->
+            <!-- script -->
+            <script src="../assets/js/jquery-1.9.1.min.js"></script>
+            <script src="../assets/js/bootstrap-collapse.js"></script>
+            <script src="../assets/js/bootstrap-transition.js"></script>
+            <script src="../assets/js/google-code-prettify/prettify.js"></script>
+            <script src="../assets/js/application.js"></script>
+            <script src="../assets/js/prism.js"></script>
+            <script>
+                //.btn {background: #ccc;}
+                $(".btn").css("background","#ccc");
+                $(".btn1").click(function(){
+                    //alert("버튼을 클릭했습니다.")
+                    $(".box1 > div").eq(0).addClass("timing1");
+                    $(".box1 > div").eq(1).addClass("timing2");
+                    $(".box1 > div").eq(2).addClass("timing3");
+                    $(".box1 > div").eq(3).addClass("timing4");
+                    $(".box1 > div").eq(4).addClass("timing5");
+                });
+
+                $(".btn2").click(function(){
+                    $(".box2 > div").eq(0).addClass("timing6");
+                    $(".box2 > div").eq(1).addClass("timing7");
+                    $(".box2 > div").eq(2).addClass("timing8");
+                    $(".box2 > div").eq(3).addClass("timing9");
+                    $(".box2 > div").eq(4).addClass("timing10");
+                    $(".box2 > div").eq(5).addClass("timing11");
+                });
+
+                $(".btn3").click(function(){
+                    $(".box3 > div").eq(0).addClass("timing12");
+                    $(".box3 > div").eq(1).addClass("timing13");
+                    $(".box3 > div").eq(2).addClass("timing14");
+                    $(".box3 > div").eq(3).addClass("timing15");
+                    $(".box3 > div").eq(4).addClass("timing16");
+                });
+
+                $(".btn4").click(function(){
+                    $(".box4 > div").eq(0).addClass("timing17");
+                    $(".box4 > div").eq(1).addClass("timing18");
+                    $(".box4 > div").eq(2).addClass("timing19");
+                    $(".box4 > div").eq(3).addClass("timing20");
+                    $(".box4 > div").eq(4).addClass("timing21");
+                });
+
+                $(".btn5 a").click(function(){          //btn5를 클릭하면 function동작
+                    var text = $(this).text();          //클릭한 버튼의 글씨를 변수text에 저장  (여기서 this는 자기자신.즉 btn5 a) 
+                    //alert(text);
+                    $(".box5 > div").removeClass().addClass(text);      //변수에는 큰따옴표 안씀
+                });
+
+                $(".btn6").click(function(){
+                    $(".box6 > div").eq(0).addClass("timing22");
+                    $(".box6 > div").eq(1).addClass("timing23");
+                    $(".box6 > div").eq(2).addClass("timing24");
+                    $(".box6 > div").eq(3).addClass("timing25");
+                });
+
+                $(".btn7").click(function(){
+                    $(".box7 > div").eq(0).addClass("timing26");
+                    $(".box7 > div").eq(1).addClass("timing27");
+                    $(".box7 > div").eq(2).addClass("timing28");
+                    $(".box7 > div").eq(3).addClass("timing29");
+                });
+
+                $(".btn8 a").click(function(){        
+                    var text = $(this).text();      
+                    $(".box8 > div").removeClass().addClass(text);  
+                });
+
+                $(".btn9 a").click(function(){        
+                    var text = $(this).text();      
+                    $(".box9 > div").removeClass().addClass(text);  
+                });
+
+            </script>
+        </body>
+    </html>

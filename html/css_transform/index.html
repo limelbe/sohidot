@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="sohinggu">
+        <meta name="description" content="css, transfrom">
+        <meta name="keywords" content="css, transfrom">
+        <title>TRANSFROM</title>
+        <!-- web_font -->
+        <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+        <!-- css -->
+        <link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+        <link href="../assets/css/custom.css" rel="stylesheet">
+        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/prism.css" rel="stylesheet">
+        <!-- Prettify -->
+        <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+        <!-- Icon -->
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+        <link rel="apple-touch-icon" href="../assets/ico/icon_57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/icon_114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/icon_72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/icon_144.png">
+        <!-- hmlt5 support -->
+        <!--[if lt IE 9]><script src="../assets/js/html5shiv.js"></script><![endif]-->
+        <!-- IE6,7 support -->
+        <!--[if lte IE 7]><link rel="stylesheet" href="comm/css/ie7.css" type="text/css" ><![endif]-->
+        <!--[if IE 8]><link rel="stylesheet" href="comm/css/ie8.css" type="text/css" ><![endif]-->
+        <!--[if lte IE 6]>
+        <p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+                사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+                <a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+                <a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a>
+                <a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+                <a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+                <a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a></p>
+            <![endif]-->
+            <style>
+            .face {display:block; margin:20px auto; width:400px; }
+            .face img {width:400px; border-radius:50%; }
+            .face1 img {width:22%; border-radius:10%; margin:1%;}
+            .member {margin:50px 0;}
+            .member li {width:150px; list-style:none; display:inline-block; margin:6px; }
+            .member li img { border-radius:50%;}
+            table em {border: 1px solid #000; font-style: normal; font-size: 80%; padding: 3px; border-radius: 3px; background:#fff; color: #333;}
+            
+            .find {font-size: 15px; color: #fff; border-left: 3px solid #4aa8d4; padding-left: 5px; background-color: #4aa8d4; width: 18px}
+            h2 {font-weight: 400; }
+            </style>
+        </head>
+        <body>
+            <!-- nav -->
+            <div id="top-nav" class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right">
+                                <li><a href="#">sohi</a></li>
+                                <li><a href="#">reference</a></li>
+                                <li><a href="#">tutorial</a></li>
+                                <li><a href="#">css</a></li>
+                                <li><a href="#">html</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //nav -->
+            <!-- header -->
+            <div id="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12" style="text-align:center;">
+                            <div class="header_tit">
+                                <h1>Professional web publishers</h1>
+                                <h2><a href="http://webstoryboy.co.kr">webstoryboy.co.kr</a></h2>
+                            </div>
+                            <div class="header_icon" id="wow">
+                                <ul>
+                                    <li class="icon_tit1"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+                                    <li class="icon_tit2"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+                                    <li class="icon_tit3"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+                                    <li class="icon_tit4"><a href="#" title=""><span class="blind">웹스토리보이 사이트</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //header -->
+            <!-- contents -->
+            <div class="container" style="margin-top:20px;">
+                <div class="row-fluid">
+                    <div class="span12">
+                    
+                    <h1>Transform</h1>
+
+                    <h2>Transform</h2>
+                    <p class="well">변환은 엘리먼트의 좌표를 조작하여 위치나 크기, 회전 각도 등을 변겅하는 기법입니다.
+                        변환 함수는 이동(tarnslate), 확대(scale), 회전(rotate), 기울이기(skew) 등의 4가지 함수와
+                        행렬변환, 원근변환이 있습니다.
+                    </p>
+
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>이동(translate)</th>
+                                <th>확대(scale)</th>
+                                <th>회전(rotate)</th>
+                                <th>기울이기(skew)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2d변환</td>
+                                <td>translate(x,y)</td>
+                                <td>scale(x,y)</td>
+                                <td>rotate(angle)</td>
+                                <td>skew(x-angle,y-angle)</td>
+                            </tr>
+                            <tr>
+                                <td>3d변환</td>
+                                <td>translate3d(x,y,z)</td>
+                                <td>scale3d(x,y,z)</td>
+                                <td>rotate3d(ax,y,z,angle)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>x축 변환</td>
+                                <td>translateX(x)</td>
+                                <td>scaleX(x)</td>
+                                <td>rotateX(angle)</td>
+                                <td>skewX(angle)</td>
+                            </tr>
+                            <tr>
+                                <td>y축 변환</td>
+                                <td>translateY(y)</td>
+                                <td>scaleY(y)</td>
+                                <td>rotateY(angle)</td>
+                                <td>skewY(angle)</td>
+                            </tr>
+                            <tr>
+                                <td>z축 변환</td>
+                                <td>translateZ(z)</td>
+                                <td>scaleZ(z)</td>
+                                <td>rotateZ(angle)</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br>
+                    <h3>translate</h3>
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Porperty</th>
+                                <th>Sample</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>translate</td>
+                                <td>transform: translate(10px, 20px);</td>
+                                <td>선택한 요소의  X좌표, Y좌표 이동을 나타냅니다.</td>
+                            </tr>
+                            <tr>
+                                <td>translate3d</td>
+                                <td>transform: translate3d(10px, 20px, 30px);</td>
+                                <td>선택한 요소의  X좌표, Y좌표, Z좌표 이동을 나타냅니다.</td>
+                            </tr>
+                            <tr>
+                                <td>translateX</td>
+                                <td>transform: translateX(10px)</td>
+                                <td>선택한 요소의  X좌표 이동을 나타냅니다.</td>
+                            </tr>
+                            <tr>
+                                <td>translateY</td>
+                                <td>transform: translateY(10px)</td>
+                                <td>선택한 요소의  Y좌표 이동을 나타냅니다.</td>
+                            </tr>
+                            <tr>
+                                <td>translateZ</td>
+                                <td>transform: translateZ(10px)</td>
+                                <td>선택한 요소의  Z좌표 이동을 나타냅니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- .well.clearfix>.block.tra1*5>.translate$$@11{translate$$@11} -->
+
+                    <br>
+                    <h4>translate (x,y)</h4>
+                    <style>
+                    .block {width: 140px; height: 140px; line-height: 140px; font-size: 18px; text-align: center; cursor: pointer; 
+                    float: left; color: #fff; margin: 40px; perspective: 500px; border: 1px solid #ccc;}
+                    .block.tra1 > div {background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%); transition: all 0.3s ease;}
+                    .block.tra1 > div:hover {transform: none;}
+                    .translate01 {transform: translate(10px, 10px);}
+                    .translate02 {transform: translate(20px, 20px);}
+                    .translate03 {transform: translate(30px, 30px);}
+                    .translate04 {transform: translate(40px, 40px);}
+                    .translate05 {transform: translate(50px, 50px);}
+                    </style>
+                    <div class="well clearfix">
+                        <div class="block tra1">
+                            <div class="translate01">translate01</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate02">translate02</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate03">translate03</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate04">translate04</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate05">translate05</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.translate01 {transform: translate(10px, 10px);}
+.translate02 {transform: translate(20px, 20px);}
+.translate03 {transform: translate(30px, 30px);}
+.translate04 {transform: translate(40px, 40px);}
+.translate05 {transform: translate(50px, 50px);}</code></pre>
+
+                    <br>
+                    <h4>translateX (x)</h4>
+                    <style>  
+                    .translate06 {transform: translateX(10px);}
+                    .translate07 {transform: translateX(20px);}
+                    .translate08 {transform: translateX(30px);}
+                    .translate09 {transform: translateX(40px);}
+                    .translate10 {transform: translateX(50px);}
+                    </style>
+                    <div class="well clearfix">
+                        <div class="block tra1">
+                            <div class="translate06">translate06</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate07">translate07</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate08">translate08</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate09">translate09</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate10">translate10</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.translate06 {transform: translateX(10px);}
+.translate07 {transform: translateX(20px);}
+.translate08 {transform: translateX(30px);}
+.translate09 {transform: translateX(40px);}
+.translate10 {transform: translateX(50px);}</code></pre>
+
+                    <br>
+                    <h4>translateY (y)</h4>
+                    <style>
+                    .translate11 {transform: translateY(10px);}
+                    .translate12 {transform: translateY(20px);}
+                    .translate13 {transform: translateY(30px);}
+                    .translate14 {transform: translateY(40px);}
+                    .translate15 {transform: translateY(50px);}
+                    </style>
+                    <div class="well clearfix">
+                        <div class="block tra1">
+                            <div class="translate11">translate11</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate12">translate12</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate13">translate13</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate14">translate14</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate15">translate15</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.translate11 {transform: translateY(10px);}
+.translate12 {transform: translateY(20px);}
+.translate13 {transform: translateY(30px);}
+.translate14 {transform: translateY(40px);}
+.translate15 {transform: translateY(50px);}</code></pre>
+
+                    <br>
+                    <h4>translateZ (z)</h4>
+                    <style>
+                    .translate16 {transform: translateZ(10px); opacity: 0.6;}
+                    .translate17 {transform: translateZ(30px); opacity: 0.6;}
+                    .translate18 {transform: translateZ(50px); opacity: 0.6;}
+                    .translate19 {transform: translateZ(70px); opacity: 0.6;}
+                    .translate20 {transform: translateZ(90px); opacity: 0.6;}
+                    </style>
+                    <div class="well clearfix">
+                        <div class="block tra1">
+                            <div class="translate16">translate16</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate17">translate17</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate18">translate18</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate19">translate19</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate20">translate20</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.translate16 {transform: translateZ(10px);}
+.translate17 {transform: translateZ(30px);}
+.translate18 {transform: translateZ(50px);}
+.translate19 {transform: translateZ(70px);}
+.translate20 {transform: translateZ(90px);}</code></pre>
+
+                    <br>
+                    <h4>translateZ (z)</h4>
+                    <style>
+                    .translate21 {transform: translateZ(-10px); opacity: 0.6;}
+                    .translate22 {transform: translateZ(-30px); opacity: 0.6;}
+                    .translate23 {transform: translateZ(-50px); opacity: 0.6;}
+                    .translate24 {transform: translateZ(-70px); opacity: 0.6;}
+                    .translate25 {transform: translateZ(-90px); opacity: 0.6;}
+                    </style>
+                    <div class="well clearfix">
+                        <div class="block tra1">
+                            <div class="translate21">translate21</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate22">translate22</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate23">translate23</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate24">translate24</div>
+                        </div>
+                        <div class="block tra1">
+                            <div class="translate25">translate25</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.translate21 {transform: translateZ(-10px);}
+.translate22 {transform: translateZ(-30px);}
+.translate23 {transform: translateZ(-50px);}
+.translate24 {transform: translateZ(-70px);}
+.translate25 {transform: translateZ(-90px);}</code></pre>
+
+
+                <br><br>
+                <h3>scale</h3>
+				<table class="table table-striped table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>Porperty</th>
+							<th>Sample</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>scale</td>
+							<td>transform: scale(x, y);</td>
+							<td>선택한 요소의  X축, Y축 확대를 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>scale3d</td>
+							<td>transform: scale3d(x, y, z);</td>
+							<td>선택한 요소의  X축, Y축, Z축 확대를 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>scaleX</td>
+							<td>transform: scaleX(x);</td>
+							<td>선택한 요소의  X축 확대를 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>scaleY</td>
+							<td>transform: scaleY(y);</td>
+							<td>선택한 요소의  Y축 확대를 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>scaleZ</td>
+							<td>transform: scaleZ(z);</td>
+							<td>선택한 요소의  Z축 확대를 나타냅니다.</td>
+						</tr>
+					</tbody>
+                </table>
+
+                <br>
+                <h4>scale (x,y)</h4>
+                <style>
+                .block.scal > div {background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%); transition: all 0.3s ease; opacity: 0.6;}
+                .block.scal > div:hover {transform: none;}
+                .scale01 {transform: scale(1.1, 1.1);}
+                .scale02 {transform: scale(1.2, 1.2);}
+                .scale03 {transform: scale(1.3, 1.3);}
+                .scale04 {transform: scale(1.4, 1.4);}
+                .scale05 {transform: scale(1.5, 1.5);}
+                </style>
+                <div class="well clearfix">
+                        <div class="block scal">
+                            <div class="scale01">scale01</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale02">scale02</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale03">scale03</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale04">scale04</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale05">scale05</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.scale01 {transform: scale(1.1, 1.1);}
+.scale02 {transform: scale(1.2, 1.2);}
+.scale03 {transform: scale(1.3, 1.3);}
+.scale04 {transform: scale(1.4, 1.4);}
+.scale05 {transform: scale(1.5, 1.5);}</code></pre>
+
+                <br>
+                <h4>scale (x,y)</h4>
+                <style>
+                .scale06 {transform: scale(0.9, 0.9);}
+                .scale07 {transform: scale(0.8, 0.8);}
+                .scale08 {transform: scale(0.7, 0.7);}
+                .scale09 {transform: scale(0.6, 0.6);}
+                .scale10 {transform: scale(0.5, 0.5);}
+                </style>
+                <div class="well clearfix">
+                        <div class="block scal">
+                            <div class="scale06">scale06</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale07">scale07</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale08">scale08</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale09">scale09</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale10">scale10</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.scale06 {transform: scale(0.9, 0.9);}
+.scale07 {transform: scale(0.8, 0.8);}
+.scale08 {transform: scale(0.7, 0.7);}
+.scale09 {transform: scale(0.6, 0.6);}
+.scale10 {transform: scale(0.5, 0.5);}</code></pre>
+
+                <br>
+                <h4>scaleX (x)</h4>
+                <style>
+                .scale11 {transform: scaleX(1.1);}
+                .scale12 {transform: scaleX(1.2);}
+                .scale13 {transform: scaleX(1.3);}
+                .scale14 {transform: scaleX(1.4);}
+                .scale15 {transform: scaleX(1.5);}
+                </style>
+                <div class="well clearfix">
+                        <div class="block scal">
+                            <div class="scale11">scale11</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale12">scale12</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale13">scale13</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale14">scale14</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale15">scale15</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.scale11 {transform: scaleX(1.1);}
+.scale12 {transform: scaleX(1.2);}
+.scale13 {transform: scaleX(1.3);}
+.scale14 {transform: scaleX(1.4);}
+.scale15 {transform: scaleX(1.5);}</code></pre>
+
+
+                <br>
+                <h4>scaleY (y)</h4>
+                <style>
+                .scale16 {transform: scaleY(1.1);}
+                .scale17 {transform: scaleY(1.2);}
+                .scale18 {transform: scaleY(1.3);}
+                .scale19 {transform: scaleY(1.4);}
+                .scale20 {transform: scaleY(1.5);}
+                </style>
+                <div class="well clearfix">
+                        <div class="block scal">
+                            <div class="scale16">scale16</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale17">scale17</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale18">scale18</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale19">scale19</div>
+                        </div>
+                        <div class="block scal">
+                            <div class="scale20">scale20</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.scale16 {transform: scaleY(1.1);}
+.scale17 {transform: scaleY(1.2);}
+.scale18 {transform: scaleY(1.3);}
+.scale19 {transform: scaleY(1.4);}
+.scale20 {transform: scaleY(1.5);}</code></pre>
+
+
+                <br><br>
+                <h3>rotate</h3>
+				<table class="table table-striped table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>Porperty</th>
+							<th>Sample</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>rotate</td>
+							<td>transform: rotate(10deg);</td>
+							<td>선택한 요소의  회전을 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>rotate3d</td>
+							<td>transform: rotate3d(0, 1, 0, 10deg);</td>
+							<td>선택한 요소의  3d회전을 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>rotateX</td>
+							<td>transform: rotateX(10deg);</td>
+							<td>선택한 요소의  X축 회전을 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>rotateY</td>
+							<td>transform: rotateY(10deg);</td>
+							<td>선택한 요소의  Y축 회전을 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>rotateZ</td>
+							<td>transform: rotateZ(10deg);</td>
+							<td>선택한 요소의  Z축 회전을 나타냅니다.</td>
+						</tr>
+					</tbody>
+                </table>
+
+                <br>
+                <h4>rotate</h4>
+                <style>
+                .block.rot1 > div {background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); transition: all 0.3s ease;}
+                .block.rot1 > div:hover {transform: none;}
+                .rotate01 {transform: rotate(10deg);}
+                .rotate02 {transform: rotate(20deg);}
+                .rotate03 {transform: rotate(30deg);}
+                .rotate04 {transform: rotate(40deg);}
+                .rotate05 {transform: rotate(50deg); animation: rotate05 2s infinite;}
+                @keyframes rotate05 {
+                    0% {transform: rotate(0deg);}
+                    50% {transform: rotate(50deg);}
+                    100% {transform: rotate(0deg);}
+                }
+                </style>
+                <div class="well clearfix">
+                        <div class="block rot1">
+                            <div class="rotate01">rotate01</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate02">rotate02</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate03">rotate03</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate04">rotate04</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate05">rotate05</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.rotate01 {transform: rotate(10deg);}
+.rotate02 {transform: rotate(20deg);}
+.rotate03 {transform: rotate(30deg);}
+.rotate04 {transform: rotate(40deg);}
+.rotate05 {transform: rotate(50deg); animation: rotate05 2s infinite;}
+@keyframes rotate05 {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(50deg);}
+    100% {transform: rotate(0deg);}
+}</code></pre>
+
+                <br>
+                <h4>rotateX (x)</h4>
+                <style>
+                .rotate06 {transform: rotateX(10deg);}
+                .rotate07 {transform: rotateX(20deg);}
+                .rotate08 {transform: rotateX(30deg);}
+                .rotate09 {transform: rotateX(40deg);}
+                .rotate10 {transform: rotateX(50deg); animation: rotate10 2s infinite;}
+                @keyframes rotate10 {
+                    0% {transform: rotateX(0deg);}
+                    50% {transform: rotateX(410deg);}
+                    100% {transform: rotateX(0deg);}
+                }
+                </style>
+                <div class="well clearfix">
+                        <div class="block rot1">
+                            <div class="rotate06">rotate06</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate07">rotate07</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate08">rotate08</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate09">rotate09</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate10">rotate10</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.rotate06 {transform: rotateX(10deg);}
+.rotate07 {transform: rotateX(20deg);}
+.rotate08 {transform: rotateX(30deg);}
+.rotate09 {transform: rotateX(40deg);}
+.rotate10 {transform: rotateX(50deg); animation: rotate10 2s infinite;}
+@keyframes rotate10 {
+    0% {transform: rotateX(0deg);}
+    50% {transform: rotateX(410deg);}
+    100% {transform: rotateX(0deg);}
+}</code></pre>
+
+                <br>
+                <h4>rotateY (y)</h4>
+                <style>
+                .rotate11 {transform: rotateY(10deg);}
+                .rotate12 {transform: rotateY(20deg);}
+                .rotate13 {transform: rotateY(30deg);}
+                .rotate14 {transform: rotateY(40deg);}
+                .rotate15 {transform: rotateY(50deg); animation: rotate15 2s infinite;}
+                @keyframes rotate15 {
+                    0% {transform: rotateY(0deg);}
+                    50% {transform: rotateY(410deg);}
+                    100% {transform: rotateY(0deg);}
+                }
+                </style>
+                <div class="well clearfix">
+                        <div class="block rot1">
+                            <div class="rotate11">rotate11</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate12">rotate12</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate13">rotate13</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate14">rotate14</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate15">rotate15</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.rotate11 {transform: rotateY(10deg);}
+.rotate12 {transform: rotateY(20deg);}
+.rotate13 {transform: rotateY(30deg);}
+.rotate14 {transform: rotateY(40deg);}
+.rotate15 {transform: rotateY(50deg); animation: rotate15 2s infinite;}
+@keyframes rotate15 {
+    0% {transform: rotateY(0deg);}
+    50% {transform: rotateY(410deg);}
+    100% {transform: rotateY(0deg);}
+}</code></pre>
+
+
+                <br>
+                <h4>rotateZ (z)</h4>
+                <style>
+                .rotate16 {transform: rotateZ(10deg);}
+                .rotate17 {transform: rotateZ(20deg);}
+                .rotate18 {transform: rotateZ(30deg);}
+                .rotate19 {transform: rotateZ(40deg);}
+                .rotate20 {transform: rotateZ(50deg); animation: rotate20 2s infinite;}
+                @keyframes rotate20 {
+                    0% {transform: rotateZ(0deg);}
+                    50% {transform: rotateZ(410deg);}
+                    100% {transform: rotateZ(0deg);}
+                }
+                </style>
+                <div class="well clearfix">
+                        <div class="block rot1">
+                            <div class="rotate16">rotate16</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate17">rotate17</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate18">rotate18</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate19">rotate19</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate20">rotate20</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.rotate16 {transform: rotateZ(10deg);}
+.rotate17 {transform: rotateZ(20deg);}
+.rotate18 {transform: rotateZ(30deg);}
+.rotate19 {transform: rotateZ(40deg);}
+.rotate20 {transform: rotateZ(50deg); animation: rotate20 2s infinite;}
+@keyframes rotate20 {
+    0% {transform: rotateZ(0deg);}
+    50% {transform: rotateZ(410deg);}
+    100% {transform: rotateZ(0deg);}
+}</code></pre>
+
+                <br>
+                <h4>rotate3D (0,0,0, deg)</h4>
+                <style>
+                .rotate21 {transform: rotate3D(0,1,1, 10deg);}
+                .rotate22 {transform: rotate3D(0,1,1, 30deg);}
+                .rotate23 {transform: rotate3D(0,1,1, 50deg);}
+                .rotate24 {transform: rotate3D(0,1,1, 70deg);}
+                .rotate25 {transform: rotate3D(0,1,1, 90deg); animation: rotate25 2s infinite;}
+                @keyframes rotate25 {
+                    0% {transform: rotate3D(0,1,1, 0deg);}
+                    50% {transform: rotate3D(0,1,1, 90deg);}
+                    100% {transform: rotate3D(0,1,1, 0deg);}
+                }
+                </style>
+                <div class="well clearfix">
+                        <div class="block rot1">
+                            <div class="rotate21">rotate21</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate22">rotate22</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate23">rotate23</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate24">rotate24</div>
+                        </div>
+                        <div class="block rot1">
+                            <div class="rotate25">rotate25</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.rotate21 {transform: rotate3D(0,1,1, 10deg);}
+.rotate22 {transform: rotate3D(0,1,1, 30deg);}
+.rotate23 {transform: rotate3D(0,1,1, 50deg);}
+.rotate24 {transform: rotate3D(0,1,1, 70deg);}
+.rotate25 {transform: rotate3D(0,1,1, 90deg); animation: rotate25 2s infinite;}
+@keyframes rotate25 {
+    0% {transform: rotate3D(0,1,1, 0deg);}
+    50% {transform: rotate3D(0,1,1, 90deg);}
+    100% {transform: rotate3D(0,1,1, 0deg);}
+}</code></pre>
+                <br><br>
+                <h3>skew</h3>
+				<table class="table table-striped table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>Porperty</th>
+							<th>Sample</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>skew</td>
+							<td>transform: skew(10deg, 10deg);</td>
+							<td>선택한 요소의  X축, Y축 기울기를 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>skewX</td>
+							<td>transform: skewX(10deg);</td>
+							<td>선택한 요소의  X축 기울기를 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>skewY</td>
+							<td>transform: skewY(10deg);</td>
+							<td>선택한 요소의  Y축 기울기를 나타냅니다.</td>
+						</tr>
+						<tr>
+							<td>rotateZ</td>
+							<td>transform: rotateZ(10deg);</td>
+							<td>선택한 요소의  Z축 회전을 나타냅니다.</td>
+						</tr>
+					</tbody>
+                </table>
+
+                <br>
+                <h4>skew (x,y)</h4>
+                <style>
+                .block.ske1 > div {background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); transition: all 0.3s ease;}
+                .block.ske1 > div:hover {transform: none;}
+                .skew01 {transform: skew(10deg, 10deg);}
+                .skew02 {transform: skew(20deg, 20deg);}
+                .skew03 {transform: skew(30deg, 30deg);}
+                .skew04 {transform: skew(40deg, 40deg);}
+                .skew05 {transform: skew(50deg, 50deg); animation: skew05 2s infinite;}
+                @keyframes skew05 {
+                    0% {transform: skew(0deg);}
+                    50% {transform: skew(50deg, 50deg)}
+                    100% {transform: skew(0deg);}
+                }
+                </style>
+                <div class="well clearfix">
+                        <div class="block ske1">
+                            <div class="skew01">skew01</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew02">skew02</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew03">skew03</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew04">skew04</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew05">skew05</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.skew01 {transform: skew(10deg, 10deg);}
+.skew02 {transform: skew(20deg, 20deg);}
+.skew03 {transform: skew(30deg, 30deg);}
+.skew04 {transform: skew(40deg, 40deg);}
+.skew05 {transform: skew(50deg, 50deg); animation: skew05 2s infinite;}
+@keyframes skew05 {
+    0% {transform: skew(0deg);}
+    50% {transform: skew(50deg, 50deg)}
+    100% {transform: skew(0deg);}
+}</code></pre>
+
+                <br>
+                <h4>skewX (x)</h4>
+                <style>
+                .skew06 {transform: skewX(10deg);}
+                .skew07 {transform: skewX(20deg);}
+                .skew08 {transform: skewX(30deg);}
+                .skew09 {transform: skewX(40deg);}
+                .skew10 {transform: skewX(50deg); animation: skew10 2s infinite;}
+                @keyframes skew10 {
+                    0% {transform: skewX(0deg);}
+                    50% {transform: skewX(50deg)}
+                    100% {transform: skewX(0deg);}
+                }
+                </style>
+                <div class="well clearfix">
+                        <div class="block ske1">
+                            <div class="skew06">skew06</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew07">skew07</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew08">skew08</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew09">skew09</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew10">skew10</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.skew06 {transform: skewX(10deg);}
+.skew07 {transform: skewX(20deg);}
+.skew08 {transform: skewX(30deg);}
+.skew09 {transform: skewX(40deg);}
+.skew10 {transform: skewX(50deg); animation: skew10 2s infinite;}
+@keyframes skew10 {
+    0% {transform: skewX(0deg);}
+    50% {transform: skewX(50deg, 50deg)}
+    100% {transform: skewX(0deg);}
+}</code></pre>
+
+                <br>
+                <h4>skewY (y)</h4>
+                <style>
+                .skew11 {transform: skewY(10deg);}
+                .skew12 {transform: skewY(20deg);}
+                .skew13 {transform: skewY(30deg);}
+                .skew14 {transform: skewY(40deg);}
+                .skew15 {transform: skewY(50deg); animation: skew15 2s infinite;}
+                @keyframes skew15 {
+                    0% {transform: skewY(0deg);}
+                    50% {transform: skewY(50deg)}
+                    100% {transform: skewY(0deg);}
+                }
+                </style>
+                <div class="well clearfix">
+                        <div class="block ske1">
+                            <div class="skew11">skew11</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew12">skew12</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew13">skew13</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew14">skew14</div>
+                        </div>
+                        <div class="block ske1">
+                            <div class="skew15">skew15</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.skew11 {transform: skewY(10deg);}
+.skew12 {transform: skewY(20deg);}
+.skew13 {transform: skewY(30deg);}
+.skew14 {transform: skewY(40deg);}
+.skew15 {transform: skewY(50deg); animation: skew15 2s infinite;}
+@keyframes skew15 {
+    0% {transform: skewY(0deg);}
+    50% {transform: skewY(50deg)}
+    100% {transform: skskewYewX(0deg);}
+}</code></pre>
+
+
+                    <br><br>
+                    <h3>transform</h3>
+                    <style>
+                        .block.tr1 > div {background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); transition: all 0.3s ease;}
+                        .block.tr1 > div:hover {transform: none;}
+                        .transform01 {transform: scale(1.1) translate(10px) skewY(30deg) rotate3d(0,1,1,30deg);}
+                        .transform02 {transform: scale(0.8) translateX(20px) skewX(-20deg) rotateZ(50deg);}
+                        .transform03 {transform: scale(1.3) translateY(30px) skew(50deg) rotateX(70deg);}
+                        .transform04 {transform: scale(0.6) translateZ(40px) skew(10deg) rotate3d(1,1,0,50deg);}
+                        .transform05 {transform: scale(1.1) translate(-30px) skew(40deg) rotateY(40deg);}
+                    </style>
+                    <div class="well clearfix">
+                        <div class="block tr1">
+                            <div class="transform01">transform01</div>
+                        </div>
+                        <div class="block tr1">
+                            <div class="transform02">transform02</div>
+                        </div>
+                        <div class="block tr1">
+                            <div class="transform03">transform03</div>
+                        </div>
+                        <div class="block tr1">
+                            <div class="transform04">transform04</div>
+                        </div>
+                        <div class="block tr1">
+                            <div class="transform05">transform05</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">.transform01 {transform: scale(1.1) translate(10px) skewY(30deg) rotate3d(0,1,1,30deg);}
+.transform02 {transform: scale(0.8) translateX(20px) skewX(-20deg) rotateZ(50deg);}
+.transform03 {transform: scale(1.3) translateY(30px) skew(50deg) rotateX(70deg);}
+.transform04 {transform: scale(0.6) translateZ(40px) skew(10deg) rotate3d(1,1,0,50deg);}
+.transform05 {transform: scale(1.1) translate(-30px) skew(40deg) rotateY(40deg);}
+</code></pre>
+
+                    <br><br>
+                    <h3>Transform animation</h3>
+                    <style>
+                        .transform06 {animation: transform06 3s 10 ease;}
+                        @keyframes transform06 {
+                            0% {background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); border-radius: 100%; transform: scale(1)}
+                            20% {background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); border-radius: 100%; transform: scale(.5)}
+                            40% {background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); border-radius: 100%; transform: scale(1)}
+                            60% {background-image: linear-gradient(45deg, #ee9ca7 0%, #ffdde1 100%); border-radius: 20%; transform: scale(1.5)}
+                            80% {background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); border-radius: 100%; transform: scale(.5)}
+                            100% {background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); border-radius: 100%; transform: scale(1)}
+                        }
+                        .transform07 {animation: transform07 5s 10 ease;}
+                        @keyframes transform07 {
+                            0% {background: #fee140; width:140px; border-radius: 50%; transform: rotateY(0deg)}
+                            40% {background: #4facfe; width:100px; border-radius: 50%; transform: rotateY(800deg)}
+                            60% {background: #fee140; width:180px; border-radius: 50%; transform: rotateX(50deg)}
+                            100% {background: #30cfd0; width:140px; border-radius: 50%; transform: rotateY(0deg)}
+                        }
+
+                        .transform08 {animation: transform08 5s 10 ease;}
+                        .an3 > div {
+                            border-radius: 50%;
+                            background-image: radial-gradient(#FFBC42 20%, #E53A40 20% 40%, #30A9DE 40% 60%, #090707 60% 80%, #F8FAFF 80%);}
+                        @keyframes transform08 {
+                            0% {transform: skewX(0deg) rotate3d(0,0,0,0deg)}
+                            50% {transform: skewX(20deg) rotate3d(1,1,1,600deg)}
+                            100% {transform: skewX(0deg) rotate3d(0,0,0,0deg)}
+                        }
+                        .transform09 {animation: transform09 1s 20 ease;}
+                        @keyframes transform09 {
+                            0% {background: #67D5B5; border-radius: 20% 20% 50% 50%; transform: translate(50px,-60px)}
+                            20% {background: #EE7785; border-radius: 50% 20% 20% 50%; transform: translate(305px,20px)}
+                            40% {background: #C89EC4; border-radius: 50% 50% 20% 20%; transform: translate(-20px,60px)}
+                            60% {background: #84B1ED; border-radius: 20% 50% 50% 20%; transform: translate(-730px,-50px)}
+                            80% {background: #ffc952; border-radius: 20% 20% 50% 50%; transform: translate(-500px,-60px)}
+                            90% {background: #EE7785; border-radius: 50% 50% 20% 20%; transform: translate(-70px,60px)}                          
+                            100% {background: #84B1ED; border-radius: 20% 20% 50% 50%; transform: translate(50px,-60px)}
+                        }
+                        .transform10 {animation: transform10 2s 20 ease;}
+                        @keyframes transform10 {
+                            0% {background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%); 
+                            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; transform: translateX(-35px) rotate(-30deg) skewY(10deg);}
+                            25% {background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%); 
+                            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; transform: translateX(0px) rotate(0deg) skewY(0deg)}
+                            50% {background: linear-gradient(to top, #c79081 0%, #dfa579 100%); 
+                            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; transform: translateX(35px) rotate(30deg) skewY(-10deg)}
+                            75% {background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%); 
+                            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; transform: translateX(0px) rotate(0deg) skewY(0deg)}  
+                            100% {background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%); 
+                            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; transform: translateX(-35px) rotate(-30deg) skewY(10deg)}    
+                        }
+                    </style>
+                    <div class="well clearfix">
+                        <div class="block an1">
+                            <div class="transform06">transform06</div>
+                        </div>
+                        <div class="block an2">
+                            <div class="transform07">transform07</div>
+                        </div>
+                        <div class="block an3">
+                            <div class="transform08">transform08</div>
+                        </div>
+                        <div class="block an4">
+                            <div class="transform09">transform09</div>
+                        </div>
+                        <div class="block an5">
+                            <div class="transform10">transform10</div>
+                        </div>
+                    </div>
+<pre><code class="language-css line-numbers">
+</code></pre>
+                            
+
+                    </div> 
+                    <!--//span12-->
+                </div>
+                <!--//row-fluid-->
+            </div>
+            <!-- //contents -->
+            <!-- //footer -->
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <h5>SOHINGGU</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //footer -->
+            <!-- script -->
+            <script src="../assets/js/jquery-1.9.1.min.js"></script>
+            <script src="../assets/js/bootstrap-collapse.js"></script>
+            <script src="../assets/js/bootstrap-transition.js"></script>
+            <script src="../assets/js/google-code-prettify/prettify.js"></script>
+            <script src="../assets/js/application.js"></script>
+            <script src="../assets/js/prism.js"></script>
+        </body>
+    </html>
