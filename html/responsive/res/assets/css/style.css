@@ -294,11 +294,12 @@ only screen and (min-resolution: 3.5dppx){
     left: 50%;
     transform: translate(-50%,-50%) translateZ(100px);
     backface-visibility: hidden;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     color: #fff;
 }
 
 .side2 figcaption h3 {
+    padding: 3px 10px;
     font-size: 20px;
     text-align: center;
 }
@@ -307,43 +308,52 @@ only screen and (min-resolution: 3.5dppx){
 
 .side3 {
     position: relative; 
-    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+    background: #000;
     overflow: hidden;
 }
 
-.side3 figure img {transition: all 0.25s ease-in-out; display: block;  transform: scale(1.1);}
-.side3:hover figure img {opacity: 0.3; transform: scale(1);}
+.side3 figure img {transition: all 0.25s ease-in-out; display: block;}
+.side3:hover figure img {opacity: 0.4;}
 
 .side3 figcaption {
-    width: 100%;
-    text-align: center;
-}
-
-.side3 figcaption:before {
-    position: absolute; top: 0; left: 0;
-    width: 200px; height: 200px;
-    transform: rotate(45deg);
-    background: rgba(255,255,255,0.5);
+    position: absolute; 
+    top: 0; right: 0; bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateX(75%) rotate(180deg);
 }
 
 .side3 figcaption h3 {
-    display: none;
-}
-
-.side3 figcaption p {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 15px;
-    border: 2px solid #fff;
-    padding: 5px;
+    font-size: 16px;
     color: #fff;
-    opacity: 0;
-    transition: all 0.25s ease-in-out;
+    text-transform: uppercase;
+    z-index: 10;
+    font-weight: normal;
 }
 
-.side3:hover figcaption p {
-    opacity: 1;
+.side3 figcaption h3 em {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 10;
+    font-weight: bold;
 }
+
+.side3 figcaption:before {
+    content:'';
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+   }
+
+.side3 figure:hover figcaption {opacity: 1; transform: translateX(0%) rotate(0deg);}
 
 
 
