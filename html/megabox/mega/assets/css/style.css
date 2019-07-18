@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* layout */
+#header {border-bottom: 1px solid #ccc;}
+#banner {}
+#content1 {}
+#content2 {}
+#content3 {}
+#content4 {}
+#content5 {}
+#footer {}
+
+/* container */
+.container {width: 1280px; margin: 0 auto; /*background: rgba(0,0,0,0.4);*/}
+
+/* header */
+.header {height: 66px;}
+.header .logo {float: left;}
+.header .logo .lo1{display: inline-block; margin: 17px 15px 0 0;}
+.header .logo .lo2{display: inline-block; vertical-align: 8px;}
+.header .menu {float: right;}
+.header .menu ul {border-left: 1px solid #ccc;}
+.header .menu li {float: left; width: 104px; text-align: center; border-right: 1px solid #ccc;}
+.header .menu li a {display: block; padding: 20px 10px; font-size: 18px; color: #333;}
+
+
