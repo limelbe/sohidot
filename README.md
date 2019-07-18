@@ -7,3 +7,6 @@
   
 <h3>반응형 사이트</h3>
 <a href="https://jshee9403.github.io/sohidot/html/responsive/res/index.html">View</a>
+
+<h3>메가박스 사이트</h3>
+<a href="https://jshee9403.github.io/sohidot/html/megabox/mega/index.html">View</a>
