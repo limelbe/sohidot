@@ -1,9 +1,12 @@
 # sohidot
 
-<a href="http://sohidot.github.co.kr">View</a>
+<a href="https://jshee9403.github.io/sohidot/html/">View</a>
 
 <h3>웹 표준 사이트</h3>
-<a herf="">
+<a href="https://jshee9403.github.io/sohidot/html/webstandard/web/index.html">View</a>
   
 <h3>반응형 사이트</h3>
-<a herf="">
+<a href="https://jshee9403.github.io/sohidot/html/responsive/res/index.html">View</a>
+
+<h3>메가박스 사이트</h3>
+<a href="https://jshee9403.github.io/sohidot/html/megabox/mega/index.html">View</a>
