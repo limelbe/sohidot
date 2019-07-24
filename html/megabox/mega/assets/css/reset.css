@@ -37,7 +37,7 @@ ul, li, ol {list-style: none;}
 h1, h2, h3, h4, h5, h6 {font-size: 13px;  font-weight: normal;}
 
 /* 반응형 이미지 */
-/*img {width: 100%;}*/
+img {width: 100%; display: block;}
 
 /* 폰트 기울기 초기화 */
 em {font-style: normal;}

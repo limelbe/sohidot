@@ -1,10 +1,11 @@
 @charset "utf-8";
 
 /* layout */
+#mNav {display: none; position: absolute; top: 8px; right: 16px;}
 #header {border-bottom: 1px solid #ccc;}
 #banner {position: relative;}
 #movie {background: #f2f2f2;}
-#content2 {height: 100px;}
+#event {height: 1000px;}
 #content3 {}
 #content4 {}
 #content5 {}
@@ -16,8 +17,14 @@
 /* row */
 .row {padding: 0 28px;}
 
+/* mNav */
+.ham {width: 25px; height: 15px; padding: 20px 10px 10px 10px; cursor: pointer;}
+.ham span {width: 25px; height: 4px; background: #39106a; display: block; position: relative;}
+.ham span:before {content:''; width: 25px; height: 4px; background: #39106a; position: absolute; left: 0; bottom: -7px;}
+.ham span:after {content:''; width: 25px; height: 4px; background: #39106a; position: absolute; left: 0; top: -7px;}; 
+
 /* header */
-.header {height: 66px;}
+.header {}
 .header .logo {float: left;}
 .header .logo .lo1{display: inline-block; margin: 17px 15px 0 0;}
 .header .logo .lo2{display: inline-block; vertical-align: 8px;}
@@ -51,7 +58,8 @@ header .menu li a:hover {background: #f1f1f1;}
 .movie .movie_title li {float: left; width: 200px; border: 1px solid #ccc; text-align: center; background: #fff; margin-left: -1px;}
 .movie .movie_title li.active a {background: #333; color: #fff;}
 .movie .movie_title li a {display: block; padding: 15px 0; font-size: 18px; font-weight: 700; color: #666;}
-.movie .movie_chart {overflow: hidden;}
+
+.movie .movie_chart {overflow: hidden; height: 556px;}
 .movie .movie_chart > div {width: 288px; float: left; margin-right: 24px; border: 1px solid #ccc; box-sizing: border-box; background: #fff;}
 .movie .movie_chart > div:last-child {margin-right: 0px;}
 .movie .movie_chart .poster {position: relative;}
@@ -71,5 +79,53 @@ header .menu li a:hover {background: #f1f1f1;}
 .movie .movie_chart .infor_btn a {float: left; width: 49%; margin-right: 2%; text-align: center; padding: 10px; font-size: 16px; background: #f2f2f2; box-sizing: border-box;;}
 .movie .movie_chart .infor_btn a:last-child {margin-right: 0;}
 
+/* event */
+.event {padding: 80px 0;}
+.event h2 {font-size: 36px; font-weight: 700; margin-bottom: 26px;}
+.event .event_box {overflow: hidden;}
+.event .event_box .event_left {float: left; width: 66%; margin-right: 2%;}
+.event .event_box .event_left .e1 {float: left; width: 100%;}
+.event .event_box .event_left .e2 {float: left; width: 50%;}
+.event .event_box .event_left .e3 {float: left; width: 50%;}
+.event .event_box .event_right {float: left; width: 32%;}
 
 
+
+
+
+/* Mediaquery */
+@media (max-width: 1290px) {
+	.container {width: 100%;}
+}
+
+@media (max-width: 1200px) {
+	#mNav {display: block;}
+	.header .menu {display: none;}
+	.header .logo .lo1 {margin: 12px 15px 9px 0;}
+	.header .logo .lo2 {display: none;}
+}
+
+@media (max-width: 900px) {
+	#movie {background: #d9d7e0; padding: 16px;}
+	#movie .row {background: #fff; padding: 32px;}
+	.movie {padding: 0;}
+	.movie .movie_title li {width: auto; border: 0;}
+	.movie .movie_title li a {padding: 0; font-size: 14px; color: #999; margin-right: 20px; font-weight: 500;}
+	.movie .movie_title li.active a {background: none; color: #333; border-bottom: 2px solid #333;}
+}
+
+@media (max-width: 600px) {
+	.row {padding: 0 16px;}
+
+	#header {position: fixed; left: 0; top: 0; width: 100%; z-index: 1000; background: #fff;}
+	.header .logo {width: 130px;}
+
+	#mNav {top: 2px; right: 8px;}
+
+	#movie {padding: 8px;}
+	#movie .row {padding: 16px;}
+
+	.slider {margin-top: 50px;}
+
+	.banner .btn {display: none;}
+}
