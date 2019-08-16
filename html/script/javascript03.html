@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript03</title>
+	<script>
+		var x = 1000;            //전역 변수
+		var y = 2000;
+		var z;          
+
+		function func(){
+			var x = 1000;          //지역변수 -> 함수안에서만 작동
+			var y = 2000;          //얘 변수 선언 지우면 위에 전역변수 y를 같이 씀
+			
+			x=100;
+			y=300;
+			z=500;                 //얘는 전역변수
+
+			document.write("함수 안<br>");
+			document.write(x);
+			document.write("<br>");
+			document.write(y);
+			document.write("<br>");
+			document.write(z);           //변수안줘도 출력됨
+			document.write("<br>");
+			document.write("<br>");
+		};
+
+		func();
+
+		document.write("함수 밖<br>");
+		document.write(x);
+		document.write("<br>");
+		document.write(y);
+		document.write("<br>");
+		document.write(z);
+
+		//alert(box);                   //알림창으로 출력
+		//document.write(box);    //문서에 출력
+		//console.log(box);         //검사에서 콘솔로 출력
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

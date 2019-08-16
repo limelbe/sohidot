@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript13</title>
+
+	<script>
+		var x1 = 100;               //숫자(number)
+		var x2 = "javascript";     //문자(string)
+		var x3 = "100"            //문자(string)
+		var x4 = "200"            //문자(string)
+
+
+		document.write(typeof (x1));
+		document.write("<br>");
+		document.write(x1 + 100);  //숫자 + 숫자
+		document.write("<br>");
+		document.write(x1 + x2);  //숫자 + 문자
+		document.write("<br>");
+		document.write(x3 + x4);  //문자 + 문자
+		document.write("<br>");
+		document.write(x1 + true);  //문자 + Boolean
+		document.write("<br>");
+		document.write(x1 + null);  //문자 + 특수값
+		document.write("<br>");
+		document.write(true + true);  //Boolean + Boolean
+		document.write("<br>");
+		document.write(true + false);  //Boolean + Boolean
+		document.write("<br>");
+		document.write(null + true);  //특수값 + Boolean
+		document.write("<br>");
+
+		x1 = "" + x1;   //숫자를 문자열로 형 변환
+		document.write(x1);
+		document.write("<br>");
+		document.write(typeof (x1));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

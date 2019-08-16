@@ -8,8 +8,8 @@
 #event {}
 #opening {background: url(../img/open_bg.jpg) no-repeat center center fixed; background-size: cover;}
 #new {}
-#content5 {height: 1000px; background: #ccc;}
-#footer {}
+#help {}
+#footer {background: #222; padding: 80px 0;}
 
 /* container */
 .container {position: relative;  width: 1280px; margin: 0 auto; /*background: rgba(0,0,0,0.4);*/}
@@ -21,7 +21,7 @@
 .ham {width: 25px; height: 15px; padding: 20px 10px 10px 10px; cursor: pointer;}
 .ham span {width: 25px; height: 4px; background: #39106a; display: block; position: relative;}
 .ham span:before {content:''; width: 25px; height: 4px; background: #39106a; position: absolute; left: 0; bottom: -7px;}
-.ham span:after {content:''; width: 25px; height: 4px; background: #39106a; position: absolute; left: 0; top: -7px;}; 
+.ham span:after {content:''; width: 25px; height: 4px; background: #39106a; position: absolute; left: 0; top: -7px;}
 
 /* header */
 .header {}
@@ -113,7 +113,82 @@ header .menu li a:hover {background: #f1f1f1;}
 .new .new_left .play svg .st1 {fill: #fff;}
 .new .new_right {position: absolute; top: 160px; right: 0; width: 392px;}
 
+/* help */
+.help {overflow: hidden; padding-bottom: 80px;}
+.help h3 {font-size: 36px; font-weight: 700; margin-bottom: 20px;}
+.help .help_box1 {float: left; width: 32%;margin-right: 2%;}
+.help .help_box1 .notice {border: 1px solid #ccc; height: 328px;}
+.help .help_box2 {float: left; width: 32%;margin-right: 2%;}
+.help .help_box2 .card {border: 1px solid #ccc; height: 328px;}
+.help .help_box3 {float: left; width: 32%;}
+.help .help_box3 .service {border: 1px solid #ccc; height: 370px;}
 
+/* notice */
+.notice {position: relative; padding: 20px;}
+.notice ul {overflow: hidden;}
+.notice ul li {float: left; text-align: center; background: #f1f1f1;}
+.notice ul li.active {background: #fff;}
+.notice ul li a {border: 1px solid #ccc; display: block; width: 80px; padding: 10px 20px; margin-right: -1px;}
+.notice ul li ul {position: absolute; left: 20px; top: 75px; width: 90%;}
+.notice ul li ul li {text-align: left; background: #fff; width: 100%; padding: 14px 0; border-bottom: 1px solid #ccc;}
+.notice ul li ul li:last-child {border-bottom: 0;}
+.notice ul li ul li dl {}
+.notice ul li ul li dl dt {}
+.notice ul li ul li dl dt strong {color: #333; position: relative;}
+.notice ul li ul li dl dt strong:after {content:''; width: 1px; height: 12px; background: #ccc; position: absolute; top: 5px; right: -10px;}
+.notice ul li ul li dl dt em {color: #333; padding-left: 20px;}
+.notice ul li ul li dl dd{overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #666; padding-top: 5px;}
+
+/* service */
+.service {position: relative;}
+.service ul {overflow: hidden;}
+.service li {float: left; width: 50%; height: 185px; box-sizing: border-box; text-align: center;}
+.service li:nth-child(1) {background: url(../img/icon01.png) no-repeat top 25px center; background-size: 110px; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+.service li:nth-child(2) {background: url(../img/icon02.png) no-repeat top 20px center; background-size: 110px; border-bottom: 1px solid #ccc;}
+.service li:nth-child(3) {background: url(../img/icon03.png) no-repeat top 20px center; background-size: 110px; border-right: 1px solid #ccc;}
+.service li:nth-child(4) {background: url(../img/icon04.png) no-repeat top 20px center; background-size: 110px;}
+.service a {color: #666; font-size: 18px; display: block; padding-top: 148px;}
+
+/* card */
+.card {padding: 20px;}
+.card > div {position: relative; border: 1px solid #ccc; height: 96px; margin-bottom: 16px;}
+.card > div img {width: 110px; border-radius: 6px; position: absolute; top: 13px; left: 10px;}
+.card > div h4 {padding: 10px 0 0 135px; font-size: 18px; font-weight: 700;}
+.card > div p {padding: 0 12px 0 135px; color: #666; font-size: 14px;}
+
+
+/* footer_infor */
+.footer_infor {}
+.footer_infor h2 {padding-bottom: 20px;}
+.footer_infor h2 img {width: 156px; display: block;}
+.footer_infor ul {padding: 15px 0 20px;}
+.footer_infor li {position: relative; display: inline; padding-right: 16px; padding-left: 8px;}
+.footer_infor li:first-child {padding-left: 0;}
+.footer_infor li:after {content:''; width: 1px; height: 12px; background: #8f8f8f; position: absolute; top: 4px; right: 4px;}
+.footer_infor li:last-child:after {width: 0;}
+.footer_infor li a {color: #8f8f8f; font-size: 14px;}
+.footer_infor address {color: #8f8f8f;}
+.footer_infor address p {color: #8f8f8f; font-size: 14px; padding-bottom: 15px;}
+.footer_infor address p span {margin-left: 16px; position: relative;}
+.footer_infor address p span:before {content:''; width: 1px; height: 12px; background: #8f8f8f; position: absolute; top: 5px; left: -8px;}
+
+/* footer_sns */
+.footer_sns {position: absolute; top: -15px; right: 28px; z-index: 100;}
+.footer_sns ul {}
+.footer_sns li {width: 32px; height: 32px; display: inline-block; background: url(../img/sns_icon.png) no-repeat; margin-left: 7px;}
+.footer_sns li.s1 {background-position: 0 -0;}
+.footer_sns li.s2 {background-position: 0 -32px;}
+.footer_sns li.s3 {background-position: 0 -64px;}
+.footer_sns li.s4 {background-position: 0 -96px;}
+.footer_sns li.s5 {background-position: 0 -128px;}
+.footer_sns li.s1:hover {background-position: -32px 0;}
+.footer_sns li.s2:hover {background-position: -32px -32px;}
+.footer_sns li.s3:hover {background-position: -32px -64px;}
+.footer_sns li.s4:hover {background-position: -32px -96px;}
+.footer_sns li.s5:hover {background-position: -32px -128px;}
+.footer_sns .tel {text-align: right; padding-top: 8px;}
+.footer_sns .tel a {color: #8f8f8f; font-size: 18px;}
+.footer_sns .tel a em {color: #fff; padding-left: 8px;}
 
 
 
@@ -129,6 +204,21 @@ header .menu li a:hover {background: #f1f1f1;}
 	.header .logo .lo1 {margin: 12px 15px 9px 0;}
 	.header .logo .lo2 {display: none;}
 }
+
+@media (max-width: 1024px) {
+	.help .help_box1 {width: 49%;margin-right: 2%;}
+	.help .help_box2 {width: 49%;margin-right: 0%;}
+	.help .help_box3 {width: 100%; margin-top: 2%;}
+	.help .help_box3 h3 {display: none;}
+	.help .help_box3 .service {height: auto;}
+	.service li {width: 25%; height: auto; padding-bottom: 20px;}
+	.service li:nth-child(1) {border: 0; background: url(../img/icon01.png) no-repeat top 40px center / 90px;}
+	.service li:nth-child(2) {border: 0; background: url(../img/icon02.png) no-repeat top 35px center / 90px;}
+	.service li:nth-child(3) {border: 0; background: url(../img/icon03.png) no-repeat top 35px center / 90px;}
+	.service li:nth-child(4) {background: url(../img/icon04.png) no-repeat top 35px center / 90px;}
+	.service a {padding-top: 130px; padding-bottom: 18px;}
+}
+
 
 @media (max-width: 900px) {
 	#movie {background: #d9d7e0; padding: 16px;}
@@ -161,6 +251,26 @@ header .menu li a:hover {background: #f1f1f1;}
 	.new .new_right {display: none;}
 	.new .new_left .play {width: 80px; height: 80px;}
 
+	#help {background: #d9d7e0; padding: 0 16px 16px 16px;}
+	#help .row {padding: 0;}
+	.help {padding-bottom: 0;}
+	.help .help_box1 {width: 100%; margin-right: 0; padding: 32px; background: #fff; box-sizing: border-box; margin-bottom: 16px;}
+	.help .help_box1 h3 {font-size: 18px; margin-bottom: 13px;}
+	.help .help_box2 {width: 100%; margin-right: 0; padding: 32px; background: #fff; box-sizing: border-box;}
+	.help .help_box2 h3 {font-size: 18px; margin-bottom: 13px;}
+	.help .help_box3 {width: 100%; padding: 32px; background: #fff; box-sizing: border-box; margin-top: 16px;}
+	.help .help_box3 h3 {display: block; font-size: 18px; margin-bottom: 13px;}
+
+	#footer {padding: 0}
+	
+	.footer_infor {text-align: center; padding: 5% 0;}
+	.footer_infor h2 img {margin: 0 auto;}
+	.footer_infor li {white-space: nowrap;}
+	.footer_infor address br {display: none;}
+	
+	#footer_sns {background: #333; padding: 0 0 12px 0;}
+	.footer_sns {position: static; text-align: center;}
+	.footer_sns .tel {display: none;}
 }
 
 @media (max-width: 600px) {
@@ -183,4 +293,15 @@ header .menu li a:hover {background: #f1f1f1;}
 
 	#new {padding: 8px;}
 	#new .row {padding: 16px;}
+
+	#help {padding: 0 8px 8px 8px;}
+	.help .help_box1 {padding: 16px; margin-bottom: 8px;}
+	.help .help_box2 {padding: 16px;}
+	.help .help_box3 {padding: 16px; margin-top: 8px;}
+
+	.service li:nth-child(1) {border: 0; background: url(../img/icon01.png) no-repeat top 40px center / 60px;}
+	.service li:nth-child(2) {border: 0; background: url(../img/icon02.png) no-repeat top 40px center / 60px;}
+	.service li:nth-child(3) {border: 0; background: url(../img/icon03.png) no-repeat top 40px center / 60px;}
+	.service li:nth-child(4) {background: url(../img/icon04.png) no-repeat top 40px center / 60px;}
+	.service a {padding-top: 105px; padding-bottom: 18px; font-size: 14px;}
 }

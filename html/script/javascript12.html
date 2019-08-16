@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript12</title>
+
+	<script>
+		document.write(false || false);    //fasle
+		document.write("<br>");
+		document.write(false || true);    //ture
+		document.write("<br>");
+		document.write(true || true);    //ture
+		document.write("<br><br>");
+
+		document.write(false && false);    //fasle
+		document.write("<br>");
+		document.write(false && true);    //fasle
+		document.write("<br>");
+		document.write(true && true);    //ture
+		document.write("<br><br>");
+
+		document.write(!false);    //true
+		document.write("<br>");
+		document.write(!true);    //fasle
+		document.write("<br><br>");
+
+		var a = 10;
+		var b = 20;
+
+		document.write(a>b && a<b);    //false
+		document.write("<br>");
+		document.write(a>b && a<b && a>=b);    //false
+		document.write("<br>");
+		document.write(a>200 || 50<b);    //false
+		document.write("<br>");
+		document.write(!(a>200));    //true
+		document.write("<br>");
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

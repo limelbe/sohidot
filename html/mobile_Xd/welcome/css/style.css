@@ -1,0 +1,14 @@
+/*body {font-family: 'Noto Sans KR', sans-serif;}
+
+figure {width: 333px; margin: 70px auto 0; position: relative;}
+figure img {}
+figure figcaption {text-align: center; padding-top: 40px;}
+figure figcaption h2 {font-size: 24px; font-weight: bold; left: 1.5;}
+figure figcaption p {font-size: 14px; font-weight: 300; line-height: 1.43; padding-top: 11px;}
+.dot {position: absolute; bottom: 120px; left: 50%; transform: translate(-50%,0);}
+.dot > div {width: 11px; height: 11px; border-radius: 50%; background: rgba(0,0,0,0.3); margin: 0 1px; display: inline-block;}
+.dot > div:first-child {background: rgba(0,0,0,1);}
+
+.btn {position: absolute; bottom: -80px; right: 0;}
+.btn .pre {width: 30px; height: 30px; background: #99cad2; border-radius: 50%; display: inline-block; margin-right: 5px;}
+.btn .next {width: 30px; height: 30px; background: #0196a4; border-radius: 50%; display: inline-block;}*/

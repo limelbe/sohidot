@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript17</title>
+
+	<script>
+		var x = 100;
+		if(x > 200){
+			document.write(x);	
+			document.write("<br>");
+		}
+
+		if(x < 200){
+			document.write(x);	
+			document.write("<br>");
+		}
+
+		if(true){
+			document.write(x);	
+			document.write("<br>");
+		}
+		if(false){
+			document.write(x);	
+			document.write("<br>");
+		}
+
+		//통화량
+		var min = prompt("당신의 하루 통화량은 몇 분인가요?", "0");
+		if(min > 60){
+			document.write("당신을 전화를 많이 쓰네요:(");
+			document.write("<br>");
+		}
+
+		//짝수 구분하기
+		var num = prompt("숫자를 입력하세요", "0");
+
+		if(num%2 == 0){
+			document.write("당신이 입력한 숫자는 짝수입니다.");
+			document.write("<br>");
+		}
+
+		//조건식에 논리형 데이터가 아닌 다른 형이 오는 경우
+		//0, null, ""(빈문자), undefined는 false 반환 / 그 밖의 값은 true 반환
+		var y = 100;
+		if(y){
+			document.write(y);
+			document.write("<br>");
+		}
+
+		var z = 0;
+		if(z){
+			document.write(z);
+			document.write("<br>");
+		}
+
+		var userName = prompt("당신의 이름은 무엇입니까?", "");
+		if(userName){
+			document.write(userName + "님 반갑습니다.");
+		}
+		//if문 한줄일 경우 중괄호 빼고 한줄로 써도 됨 if(userName) document.write(userName + "님 반갑습니다.");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -72,8 +72,10 @@
   margin-bottom: 1%;
   float: left;
 
-  border-bottom: 3px solid #8432c4;
+  border-bottom: 3px solid #D74D35;
   background-color: #fff;
+
+  border-radius: 10px;
 }
 .color-shape.photoshop a {color: #333;} 
 

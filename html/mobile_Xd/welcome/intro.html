@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome-intro</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.css">
+
+    <style>
+         * {margin: 0; padding: 0;}
+
+        .container {width: 800px; margin: 0 auto;}
+        .row {padding: 0 24px;}
+        .swiper-container {width: 100%; padding-bottom: 40px;}
+        .swiper-container img {width: 100%;}
+        .swiper-pagination-bullet-active {background: #000;}
+        .swiper-button-prev {position: absolute; top: auto; bottom: 20px; left: auto; right: 65px; background: #99cad2 url(img/btn_pre.png) no-repeat center center; width: 35px; height: 35px; border-radius: 50%;}
+        .swiper-button-next {position: absolute; top: auto; bottom: 20px; right: 20px; background: #0196a4 url(img/btn_next.png) no-repeat center center; width: 35px; height: 35px; border-radius: 50%;}
+
+        .contents {text-align: center; padding-bottom: 100px; position: relative;}
+        .contents h1 {font-size: 32px; padding-top: 20px;}
+        .contents p {font-size: 14px; color: #333; padding-top: 20px; line-height: 1.43}
+
+        @media (max-width: 800px) {
+            .container {width: 100%;}
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 1.5dppx){
+            .swiper-button-prev {position: absolute; top: auto; bottom: 20px; left: auto; right: 65px; background: #99cad2 url(img/btn_pre@2x.png) no-repeat center center; width: 35px; height: 35px; border-radius: 50%;}
+            .swiper-button-next {position: absolute; top: auto; bottom: 20px; right: 20px; background: #0196a4 url(img/btn_next@2x.png) no-repeat center center; width: 35px; height: 35px; border-radius: 50%;}
+       }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 1.5dppx){
+            .swiper-button-prev {position: absolute; top: auto; bottom: 20px; left: auto; right: 65px; background: #99cad2 url(img/btn_pre@3x.png) no-repeat center center; width: 35px; height: 35px; border-radius: 50%;}
+            .swiper-button-next {position: absolute; top: auto; bottom: 20px; right: 20px; background: #0196a4 url(img/btn_next@3x.png) no-repeat center center; width: 35px; height: 35px; border-radius: 50%;}
+       }
+    </style>
+
+</head>
+<body>
+
+    <section class="gallery">
+        <div class="container">
+            <!-- Slider -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/intro01.png" srcset="img/intro01@2x.png 2x, img/intro01@3x.png 3x">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/intro01.png" srcset="img/intro01@2x.png 2x, img/intro01@3x.png 3x">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/intro01.png" srcset="img/intro01@2x.png 2x, img/intro01@3x.png 3x">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/intro01.png" srcset="img/intro01@2x.png 2x, img/intro01@3x.png 3x">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- //Slider -->
+        </div>
+    </section>
+
+    <section class="contents">
+        <div class="container">
+            <div class="row">
+                <h1>Welcome Trip</h1>
+                <p>This page is my welcome intro about trip<br>
+                those arevery happy days in my life<br>
+                try to going trip sometimes.</p>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <figure>
+        <img src="img/intro01.png" srcset="img/intro01@2x.png 2x, img/intro01@3x.png 3x">
+        <figcaption>
+            <h2>Welcome Trip</h2>
+            <p>
+                This page is my welcome intro about trip</br>
+                those arevery happy days in my life</br>
+                try to going trip sometimes.
+            </p>
+        </figcaption>
+        <div class="dot">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="btn">
+            <div class="pre"></div>
+            <div class="next"></div>
+        </div>
+    </figure>
+ -->
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            spaceBetween: 30,
+
+            pagination: {
+              el: '.swiper-pagination',
+            },
+
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome-login</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+
+    <style>
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none; color: #000;}
+        body {
+            position: relative;
+            height: 100vh;
+            background: url(img/welcomebg.jpg) no-repeat center center;
+            background-size: cover;
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 1.5dppx){
+            body {background: url(img/welcomebg@2x.jpg) no-repeat center center; background-size: cover;}
+       }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 1.5dppx){
+            body {background: url(img/welcomebg@3x.jpg) no-repeat center center; background-size: cover;}
+       }
+
+        body::after {
+            content:'';
+            position: absolute; left: 0; top: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.38);
+            z-index: -1;
+        }
+
+        header {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column nowrap;
+        }
+
+        h1 {font-size: 45px; line-height: 1.17; color: #fff; font-family: 'Abril Fatface', cursive; font-weight: normal; text-align: center;}
+        p {font-size: 15px; color: #f2f2f2; text-align: center; font-family: 'Noto Sans KR', sans-serif; font-weight: 300; padding-top: 20px;}
+
+        .btn_wrap {
+            position: absolute; bottom: 20px; left: 0; 
+            width: 100%;
+        }
+        .btn_wrap a {
+            display: block; 
+            width: 92%; margin: 2vh 4%; 
+            height: 50px; border-radius: 25px; 
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 50px;
+        }
+        .btn_wrap a.facebook {background: #2b3181; color: #fff;}
+        .btn_wrap a.google {background: #fff;}
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Welcome<br>To MY SITE</h1>
+        <p>This is my first Xd experience<br>Hello poketmonGo</p>
+    </header>
+    <div class="btn_wrap">
+        <a href="#" class="facebook">Facebook</a>
+        <a href="#" class="google">Google</a>
+    </div>
+</body>
+</html>
