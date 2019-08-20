@@ -221,10 +221,10 @@
 }
 #contents_tit p {
 	padding:35px 0; 
-	font-family:'Nanum Brush Script'; font-size:39px; letter-spacing:2px;
+	/*font-family:'Nanum Brush Script';*/ font-family: 'Exo', sans-serif; font-size:39px; letter-spacing:2px;
 }
 #contents_tit p a {
-	color:#2c94c4; 
+	color:#F89539; 
 }
 
 

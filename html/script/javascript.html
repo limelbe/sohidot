@@ -1275,29 +1275,6 @@
 	
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-
-					<h4>분기판매량 <a href="javascript16.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
-<pre><code class="language-markup line-numbers">&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-	&lt;meta charset="UTF-8"&gt;
-	&lt;title&gt;Javascript16&lt;/title&gt;
-
-	&lt;script&gt;
-		var q4 = prompt("4분기 판매량은?", "0");
-		var avr = (1200 + 1300 + 1000) / 3;
-
-		var result2 = Number(q4) &gt;= avr;
-
-		result2 = result2 ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다."  
-
-		document.write(result2);
-	&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
 				<!-- //Introduction -->
 
 
@@ -1386,7 +1363,7 @@
 
 					<h3 id="intro6_2" class="page-header">if ~ else문</h3>
 					<div class="panel panel-default">
-						<div class="panel-heading">if문 사용 방법</div>
+						<div class="panel-heading">if ~ else문 사용 방법</div>
 						<div class="panel-body">
 							if(조건식){<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;//true(참)일 때 실행코드<br>
@@ -1442,7 +1419,7 @@
 
 					<h3 id="intro6_3" class="page-header">다중 if문</h3>
 					<div class="panel panel-default">
-						<div class="panel-heading">if문 사용 방법</div>
+						<div class="panel-heading">else if문 사용 방법</div>
 						<div class="panel-body">
 							if(조건식){<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;//true(참)일 때 실행코드<br>
@@ -1455,6 +1432,7 @@
 							} 
 						</div>
 					</div>
+
 					<h4>4계절 <a href="javascript19.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
 <pre><code class="language-markup line-numbers">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
@@ -1481,17 +1459,223 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
+					<h4>중첩if문 <a href="javascript20.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Javascript20&lt;/title&gt;
+&lt;/head&gt;
+&lt;script&gt;
+    alert("test님 반갑습니다:)");
+    var userId = prompt("아이디를 입력해주세요.");
+    var userPw = prompt("비밀번호를 입력해주세요.");
+    var uid = "sohi";
+    var upw = "1234";
+
+    if (userId == uid){
+        if(userPw == upw){
+            document.write(uid + "님 로그인되었습니다.");
+        } else{
+            alert("비밀번호를 잘못 입력하셨습니다.");
+            location.reload();
+        }
+    } else {
+        alert("아이디를 잘못 입력하셨습니다.");
+        location.reload();
+    }
+&lt;/script&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
 					<h3 id="intro6_4" class="page-header">switch문</h3>
+					<div class="panel panel-default">
+						<div class="panel-heading">switch문 사용 방법</div>
+						<div class="panel-body">
+							var 변수 = 초기값;<br>
+							switch(변수){<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;case 값1: 실행코드1;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;case 값2: 실행코드2;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;case 값3: 실행코드3;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;default: 실행코드4;<br>
+							} 
+						</div>
+					</div>
+					<h4>switch문 <a href="javascript21.html" target="_blank"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Javascript21&lt;/title&gt;
+&lt;/head&gt;
+&lt;script&gt;
+    var site = prompt("다음, 네이버, 구글 중 주로 이용하는 사이트를 입력해 주세요","");
+    var url;
+
+    switch(site){
+        case "다음": 
+            url = "daum.net";
+            break;
+
+        case "네이버": 
+            url = "naver.com";
+            break;
+
+        case "구글": 
+            url = "google.com";
+            break;
+
+        default: 
+            alert("보기에 없는 사이트입니다."); 
+            location.reload();
+    }
+
+    console.log(url);
+    if(url) location.href = "http://www." + url;
+&lt;/script&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
 					<h3 id="intro6_5" class="page-header">조건부(삼항) 연산자</h3>
+					<div class="panel panel-default">
+						<div class="panel-heading">조건부(삼항) 연산자 사용 방법</div>
+						<div class="panel-body">
+							조건식 ? 조건이 true(참)일 때 실행코드 : 조건이 false(거짓)일 때 실행코드;<br>
+							var result = a&lt;b ? "javascript" : "hello";
+						</div>
+					</div>
+					<h4>분기판매량 <a href="javascript16.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Javascript16&lt;/title&gt;
+
+	&lt;script&gt;
+		var q4 = prompt("4분기 판매량은?", "0");
+		var avr = (1200 + 1300 + 1000) / 3;
+
+		var result = Number(q4) &gt;= avr;
+
+		result = result ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다."  
+
+		document.write(result2);
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 				</div>
 				<!-- //Introduction -->
 
 				<!-- Introduction -->
 				<div class="bs-docs-section">
 					<h2 id="intro7" class="page-header">반복문</h2>
+					<p class="lead">반복문을 이용하면 코드를 원하는 횟수만큼 반복하여 실행할 수 있습니다.</p>
+
 					<h3 id="intro7_1" class="page-header">while문</h3>
+					<div class="panel panel-default">
+						<div class="panel-heading">while문 사용 방법</div>
+						<div class="panel-body">
+							var 변수 = 초기값;<br>
+							while(조건식){<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;//실행코드;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;//증감식;<br>
+							}
+						</div>
+					</div>
+					<h4>while문 <a href="javascript22.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers">
+	
+</code></pre>
+
 					<h3 id="intro7_2" class="page-header">do ~ while문</h3>
-					<h3 id="intro7_3" class="page-header">for</h3>
+					<p>while문의 경우에는 조건식의 만족 여부를 먼저 검사한 후 중괄호에 있는 코드의 실행여부를 결정하지만, do while문은 중괄호에 있는 코드를 먼저 실행하고 조건식을 검사합니다.</p>
+					<div class="panel panel-default">
+						<div class="panel-heading">do ~ while문 사용 방법</div>
+						<div class="panel-body">
+							var 변수 = 초기값;<br>
+							do{<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;//실행코드;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;//증감식;<br>
+							}while(조건식)
+						</div>
+					</div>
+					<h4>do ~ while문 <a href="javascript23.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers">
+	
+</code></pre>
+
+					<h3 id="intro7_3" class="page-header">for문</h3>
+					<div class="panel panel-default">
+						<div class="panel-heading">for문 사용 방법</div>
+						<div class="panel-body">
+							for(초기값; 조건식; 증감식){<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;//실행코드;<br>
+							}
+						</div>
+					</div>
+					<h4>for문 <a href="javascript24.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Javascript24&lt;/title&gt;
+    &lt;script&gt;
+    	//for 구문으로 목록태그 작성
+        var t="&lt;ul&gt;";
+        
+        for(var i=0; i&lt;=5; i++){
+            t+="&lt;li&gt;" + i + "&lt;/li&gt;"
+        }
+
+        t+="&lt;/ul&gt;";
+
+        console.log(i);
+        console.log(t);
+
+        document.write(t);
+        document.write("&lt;br&gt;");
+        
+
+        //for 구문으로 합 구하기
+        var sum = 0;
+
+        for(var n=0; n&lt;=5; n++){
+            sum += n;
+        }
+
+        console.log(sum);
+
+        document.write("1부터 " + (n-1) + "까지의 합은 " + sum + "입니다.");
+        document.write("&lt;br&gt;&lt;br&gt;");
+
+
+        //for 구문으로 연도선택 만들기
+        var result = "&lt;select&gt;";
+
+        for (var y=2000; y&gt;=1950; y--){
+            result += '&lt;option value="' + y + '"&gt;' + y + '&lt;/option&gt;';
+        }
+        result += "&lt;/select&gt;";
+
+        console.log(result);
+        document.write(result);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
 					<h3 id="intro7_4" class="page-header">다중 for문</h3>
 					<h3 id="intro7_5" class="page-header">break, continue문</h3>
 				</div>

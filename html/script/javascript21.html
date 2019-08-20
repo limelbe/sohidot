@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Javascript21</title>
+</head>
+<script>
+    var site = prompt("다음, 네이버, 구글 중 주로 이용하는 사이트를 입력해 주세요","");
+    var url;
+
+    switch(site){
+        case "다음": 
+            url = "daum.net";
+            break;
+
+        case "네이버": 
+            url = "naver.com";
+            break;
+
+        case "구글": 
+            url = "google.com";
+            break;
+
+        default: 
+            alert("보기에 없는 사이트입니다."); 
+            location.reload();
+    }
+
+    console.log(url);
+
+    if(url) location.href = "http://www." + url;
+</script>
+<body>
+    
+</body>
+</html>
