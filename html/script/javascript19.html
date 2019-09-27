@@ -5,9 +5,11 @@
 	<title>Javascript19</title>
 
 	<script>
-		var mon = prompt("현재는 몇 월입니가?","0");
+		var mon = prompt("현재는 몇 월입니까?","0");
 
-		if(mon>=6 && mon<=8){
+		if(mon>12){
+			document.write("1년은 1월부터 12월까지 있습니다 :)")
+		}else if(mon>=6 && mon<=8){
 			document.write("여행가기 좋은 여름이네요!");
 		} else if(mon>=9 && mon<=11){
 			document.write("독서의 계절 가을이네요!");

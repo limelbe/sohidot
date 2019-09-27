@@ -1,0 +1,185 @@
+@charset "utf-8";
+@font-face{
+    font-family: NotoS;
+    font-weight: 200;
+    src: url("../font/NotoSans-Thin.eot");
+    src: local("※"), 
+        url("../font/NotoSans-Thin.woff") format("woff"),
+        url("../font/NotoSans-Thin.ttf") format("truetype");
+}
+@font-face{
+    font-family: NotoS;
+    font-weight: 400;
+    src: url("../font/NotoSans-Regular.eot");
+    src: local("※"), 
+        url("../font/NotoSans-Regular.woff") format("woff"),
+        url("../font/NotoSans-Regular.ttf") format("truetype");
+}
+@font-face{
+    font-family: NotoS;
+    font-weight: 500;
+    src: url("../font/NotoSans-Medium.eot");
+    src: local("※"), 
+        url("../font/NotoSans-Medium.woff") format("woff"),
+        url("../font/NotoSans-Medium.ttf") format("truetype");
+}
+@font-face{
+    font-family: NotoS;
+    font-weight: 700;
+    src: url("../font/NotoSans-Bold.eot");
+    src: local("※"), 
+        url("../font/NotoSans-Bold.woff") format("woff"),
+        url("../font/NotoSans-Bold.ttf") format("truetype");
+}
+@font-face{
+    font-family: Neo;
+    font-weight: 400;
+    src: url("../font/Neothic.eot");
+    src: local("※"), 
+        url("../font/Neothic.eot") format("woff"),
+        url("../font/Neothic.ttf") format("truetype");
+}
+@font-face{
+    font-family: Lucidab;
+    font-weight: 400;
+    src: url("../font/LBRITE.eot");
+    src: local("※"), 
+        url("../font/LBRITE.woff") format("woff"),
+        url("../font/LBRITE.TTF") format("truetype");
+}
+@font-face{
+    font-family: Lucidab;
+    font-weight: 700;
+    src: url("../font/lucidabrightdemibold.eot");
+    src: local("※"), 
+        url("../font/lucidabrightdemibold.woff") format("woff"),
+        url("../font/lucidabrightdemibold.TTF") format("truetype");
+}
+@font-face{
+    font-family: GothA1;
+    font-weight: 300;
+    src: url("../font/GothicA1-Light.eot");
+    src: local("※"), 
+        url("../font/GothicA1-Light.woff") format("woff"),
+        url("../font/GothicA1-Light.TTF") format("truetype");
+}
+@font-face{
+    font-family: GothA1;
+    font-weight: 400;
+    src: url("../font/GothicA1-Regular.eot");
+    src: local("※"), 
+        url("../font/GothicA1-Regular.woff") format("woff"),
+        url("../font/GothicA1-Regular.TTF") format("truetype");
+}
+@font-face{
+    font-family: GothA1;
+    font-weight: 700;
+    src: url("../font/GothicA1-Bold.eot");
+    src: local("※"), 
+        url("../font/GothicA1-Bold.woff") format("woff"),
+        url("../font/GothicA1-Bold.TTF") format("truetype");
+}
+@font-face {
+    font-family: 'Chosunilbo_myungjo'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face{
+    font-family: Dsdigi;
+    font-weight: 400;
+    src: url("../font/DS-DIGI.eot");
+    src: local("※"), 
+        url("../font/DS-Digital.woff") format("woff"),
+        url("../font/DS-DIGI.TTF") format("truetype");
+}
+
+/* reset */
+body, ul , h1, h2, h3, h4, h5, h6, a, p, figure, figcaption, button, th, td {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%; font-weight: normal;}
+header, nav, aside, section, article, footer {display: block;}
+body {background: #000; color: #f0f0f0; font-family: Chosunilbo_myungjo; font-weight: 400;}
+ul {list-style: none;}
+a:link, a:visited, a:hover, a:active {text-decoration: none; color: inherit;}
+button {background: none; border: none; cursor: pointer;}
+img {vertical-align: top; border: none;}
+strong {font-style: normal; font-weight: normal;}
+
+
+/* common class */
+.clearfix:after {content:''; display: block; clear: both;}
+.f_l {float: left;}
+.f_r {float: right;}
+.p_a {position: absolute;}
+.p_r {position: relative;}
+.blind {font-size: 0; line-height: 0; width: 1px; height: 1px; overflow: hidden; position: absolute; top: 0; left: -9999px; text-indent: -9999px;}
+#wrap {position: relative; max-width: 1920px; margin: 0 auto; overflow: hidden;}
+.hf_wrap {width: 1620px; margin: 0 auto;}
+.area {width: 1224px; margin: 0 auto;}
+
+/* skip navigation */
+#skip a {position: absolute; top: 0; left: -9999px; z-index: 1000;}
+#skip a:focus {left: 0; width: 100%; height: 40px; line-height: 40px; text-align: center; background: #f0f0f0; color: #000; font-weight: 700;}
+
+
+/* header */
+#header {
+    z-index: 1000;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 94px;
+    line-height: 94px;
+    border-bottom: 1px solid rgba(240,240,240,0.4); 
+    background-color: rgba(0,0,0,0.5); 
+    -webkit-backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px);
+}
+
+#header h1 {
+    font-family: Neo;
+    font-size: 34px;
+}
+#header nav ul {
+    font-family: GothA1; 
+    font-size: 18px; 
+    font-weight: 700;
+    text-align: center;
+}
+#header nav ul li {float: left;  width: 120px;}
+#header nav ul li + li {margin-left: 40px;}
+#header nav ul li.on {text-shadow: 0 0 20px rgba(255,255,255,0.9);}
+#header nav ul li a {display: block; width: 120px;}
+
+#header.bg {border-color: rgba(0,0,0,0.4); color: #000;}
+#header.bg nav ul li {color: #000 !important;}
+#header.bg nav ul li.on {text-shadow: 0 0 20px rgba(0,0,0,0.4);}
+#header.bg nav ul li.off {color: #ccc !important;}
+
+
+/* footer */
+#footer {margin-top: 100px; height: 400px; background: #000;}
+#footer .hf_wrap {border-top: 1px solid rgba(240,240,240,0.4); padding-top: 100px;}
+
+#footer .footer_logo {top: 100px; left: 50%; width: 400px; margin-left: -200px; text-align: center; font-size: 17px;}
+#footer .footer_logo img {margin-bottom: 36px;}
+
+#footer .creators {font-size: 25px;}
+#footer .creators h6 {font-family: Neo; margin-bottom: 40px;}
+#footer .creators ul li {padding-bottom: 24px;}
+
+#footer .sns {width: 252px; height: 48px;}
+#footer .sns ul li {float: left; filter: saturate(100%); transition: .3s ease-in-out;}
+#footer .sns ul li + li {margin-left: 20px;}
+#footer ul li:hover{filter: saturate(10%);}
+#footer .sns ul li a {display: block; width: 48px; height: 48px; background: no-repeat center top;}
+#footer .sns ul .twitter a {background-image: url(../images/common/footer-icon1.png);}
+#footer .sns ul .instagram a {background-image: url(../images/common/footer-icon2.png);}
+#footer .sns ul .youtube a {background-image: url(../images/common/footer-icon3.png);}
+#footer .sns ul .facebook a {background-image: url(../images/common/footer-icon4.png);}
+
+
+/* top top */
+.move_top {position: fixed; bottom: 30px; right: 0; z-index: 900; display: block; width: 60px; height: 96px; opacity: 0; transition: all 0.8s ease-in-out; background: url(../images/common/btn_totop.png);}
+.move_top.view {opacity: 1;}
+.move_top.bg {background: url(../images/common/btn_totopbg.png);}

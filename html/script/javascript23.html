@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Javascript23</title>
+</head>
+
+<script>
+    var choice = prompt("전화 연결 중입니다. 1번을 선택하시면 통화 연결, 2번을 선택하시면 문자 연결, 3번을 선택하시면 영상 통화 연걸입니다.", "0");
+
+    console.log(choice);
+    console.log(typeof choice);
+    
+    var result;
+
+    if (choice=="1"){
+        result = "잠시 후 통화가 연결됩니다.";
+    } else if (choice=="2") {
+        result ="잠시 후 문자가 연결됩니다.";
+    } else if (choice=="3") {
+        result = "잠시 후 영상 통화가 연결됩니다.";
+    } else {
+        result ="잘못 선택하셨습니다.";
+    }
+    document.write(result);
+</script>
+<body>
+    
+</body>
+</html>

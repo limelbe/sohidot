@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>Article_Main</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <style>
+        *:focus{outline: 1px solid #af0000;}
+    </style>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/article.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="hf_wrap">
+            <h1 class="f_l"><a href="../index.html">NORMAL</a></h1>
+            <nav class="f_r">
+                <ul class="clearfix">
+                    <li><a href="../article/index.html">Article</a></li>
+                    <li><a href="../culture/index.html">Cultrue</a></li>
+                    <li><a href="../scal/index.html">S Calendar</a></li>
+                    <li><a href="../redroom/index.html">RedRoom</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+
+    <section class="A_slider">
+        <ul class="visual clearfix">
+            <li class="list1">
+                <a href="sub_wh.html"><!-- 100% 이미지일 경우 bg로 처리함 -->
+                    <div class="text_area">
+                        <h4>WEEKLY <span>HOT</span> ISSUE</h4>
+                        <strong>그는 당신에게 흥분하지 않았다.</strong>
+                    </div>
+                </a>
+            </li>
+            <li class="list2">
+                <a href="sub_nb.html">
+                    <div class="text_area">
+                            <h4>NANA <span>& BANANA</span></h4>
+                            <strong>다음주 아내가 바람을 피웁니다.</strong>
+                    </div>
+                </a>
+            </li>
+            <li class="list3">
+                <a href="sub_pi.html">
+                    <div class="text_area">
+                            <h4><span>PROFESSIONAL</span> INTERVIEW</h4>
+                            <strong>남자 산부인과 의사의 삶</strong>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="prev_next">
+            <button type="button" class="prev"><span class="blind">이전 슬라이드</span></button>
+            <button type="button" class="next"><span class="blind">다음 슬라이드</span></button>
+        </div>
+        <div class="play_stop">
+            <button type="button" class="play"><span class="blind">애니메이션 </span>START</button>
+            <button type="button" class="stop"><span class="blind">애니메이션 </span>STOP</button>
+        </div>
+        <ul class="indicator">
+            <li>
+                <a href="" role="button">WEEKLY HOT ISSUE</a>
+            </li>
+            <li>
+                <a href="" role="button">NANA & BANANA</a>
+            </li>
+            <li>
+                <a href="" role="button">PROFESSIONAL INTERVIEW</a>
+            </li>
+        </ul>
+    </section>
+    <!--// mainSlider1 -->
+
+    
+    <div id="A_area">
+
+            <div id="storyTab">
+    
+                <h2>ARTICLE</h2>
+                <ul class="tablist" role="tablist" aria-label="기사컨텐츠별소개">
+                    <li id="tab1" class="tab first" role="tab" aria-controls="tabpanel1">ALL</li>
+                    <li id="tab2" class="tab" role="tab" aria-controls="tabpanel2">WEEKLY HOT ISSUE</li>
+                    <li id="tab3" class="tab" role="tab" aria-controls="tabpanel3">NANA & BANANA</li>
+                    <li id="tab4" class="tab last" role="tab" aria-controls="tabpanel4">PROFESSIONAL INTERVIEW</li>
+                </ul>
+                <!-- // tablist-->
+                
+                <div id="tabpanel1" class="tabpanel" role="tabpanel" aria-labelledby="tab1">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/All01.jpg" alt="">
+                                <p class="title">당신이 관계에<br>만족하지 못하는 당연한 이유</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/All08.jpg" alt="">
+                                <p class="title">&lt;20대에게 묻다&gt;<br>우리 피임 잘 하고 있을까?</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/All12.jpg" alt="">
+                                <p class="title">&lt;산부인과 전문의에게 묻다&gt;<br>낙태에 대한 그들의 의견</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/All04.jpg" alt="">
+                                <p class="title">운동을 하면<br>정말 성욕이 감소할까?</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/All05.jpg" alt="">
+                                <p class="title">&lt;30대에게 묻다&gt;<br>왜<br>한사람만 사랑해야 하는가</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/All06.jpg" alt="">
+                                <p class="title">&lt;산부인과 전문의에게 묻다&gt;<br>남자 산부인과 의사의 삶</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/All07.jpg" alt="">
+                                <p class="title">엄마가 나의<br>원나잇을 알고 있다</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/All02.jpg" alt="">
+                                <p class="title">&lt;예비 부부에게 묻다&gt;<br>당신과의 결혼을<br>결심한 5가지 이유</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/All03.jpg" alt="">
+                                <p class="title">&lt;양호선생님께 묻다&gt;<br>청소년기 성관계가<br>잘못된 것일까?</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/All10.jpg" alt="">
+                                <p class="title">사랑을 해도 외로운<br>당신에게</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/All11.jpg" alt="">
+                                <p class="title">&lt;이혼한 부부에게 묻다&gt;<br>다음주 아내가 바람을<br>피웁니다.</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/All09.jpg" alt="">
+                                <p class="title">&lt;성전문 상담가에게 묻다&gt;<br>성전문 상담소에는<br> 어떤 사람들이 가야 할까?</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //all -->
+    
+                <div id="tabpanel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week01.jpg" alt="">
+                                <p class="title">당신이 관계에<br>만족하지 못하는 당연한 이유</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week02.jpg" alt="">
+                                <p class="title">당신의<br>속사정을 알아 봅시다</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week03.jpg" alt="">
+                                <p class="title">당신이 상상 한<br>섹스엔 더 시티는 없다.</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week04.jpg" alt="">
+                                <p class="title">운동을 하면<br>정말 성욕이 감소할까?</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week05.jpg" alt="">
+                                <p class="title">마치 계단을<br>오르는 듯한 관계였다</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week06.jpg" alt="">
+                                <p class="title">그 곳에 처음 가본 날</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week07.jpg" alt="">
+                                <p class="title">엄마가 나의<br>원나잇을 알고 있다</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week08.jpg" alt="">
+                                <p class="title">당신은 모르는<br>생리통 이야기</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week09.jpg" alt="">
+                                <p class="title">반려견도<br>연인이 필요하다.</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_wh.html">
+                                <img src="../images/article/Article_main_image/Main_Week10.jpg" alt="">
+                                <p class="title">사랑을 해도 외로운<br>당신에게</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_Week11.jpg" alt="">
+                                <p class="title">나는 생리하지<br>않기로 했다</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Week12.jpg" alt="">
+                                <p class="title">침실이 아닌<br>곳에서 우리는 섹스했다.</p>
+                                <p class="hover">WEEKLY HOT ISSUE</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//weekly  -->
+    
+                <div id="tabpanel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB01.jpg" alt="">
+                                <p class="title">&lt;20대에게 묻다&gt;<br>우리 피임 잘 하고 있을까?</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB02.jpg" alt="">
+                                <p class="title">서로의 사생활을<br>
+                                    어디까지 알고 있을까?</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB03.jpg" alt="">
+                                <p class="title">&lt;70대에게 묻다&gt;<br>우리는 아직도 섹스합니다.</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB04.jpg" alt="">
+                                <p class="title">&lt;30대에게 묻다&gt;<br>왜<br>한사람만 사랑해야 하는가</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB05.jpg" alt="">
+                                <p class="title">우리는 왜<br>서로를 이해하지 못할까?</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB06.jpg" alt="">
+                                <p class="title">&lt;연예인 부부에게 묻다&gt;<br>그들이 말하는<br>쇼윈도우 부부의 삶</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB07.jpg" alt="">
+                                <p class="title">&lt;예비부부에게 묻다&gt;<br>당신과 결혼을<br>결심한 5가지 이유</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB08.jpg" alt="">
+                                <p class="title">우리가 관계를 위해<br>물품을 구매하는 이유</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB09.jpg" alt="">
+                                <p class="title">&lt;80대 부부에게 묻다&gt;<br>우리는 평생이 함께였다.</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB10.jpg" alt="">
+                                <p class="title">&lt;이혼한 부부에게 묻다&gt;<br>다음주 아내가 바람을<br>피웁니다.</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB11.jpg" alt="">
+                                <p class="title">당신의 연인이 보는<br>그 동영상에 대하여</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_nb.html">
+                                <img src="../images/article/Article_main_image/Main_NB12.jpg" alt="">
+                                <p class="title">&lt;헤어진 연인에게 묻다&gt;<br>우리가 헤어진 이유</p>
+                                <p class="hover">NANA & BANANA</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--// nana&banana -->
+                
+                <div id="tabpanel4" class="tabpanel" role="tabpanel" aria-labelledby="tab4">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro01.jpg" alt="">
+                                <p class="title">&lt;산부인과 전문의에게 묻다&gt;<br>낙태에 대한 그들의 의견</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro02.jpg" alt="">
+                                <p class="title">&lt;이혼전문 변호사에게 묻다&gt;<br>당신의 이혼은<br>누가 변호하였나?</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro03.jpg" alt="">
+                                <p class="title">&lt;칼럼니스트에게 묻다&gt;<br>본인의 사랑도<br>글처럼 해결 하는가?</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro04.jpg" alt="">
+                                <p class="title">&lt;산부인과 전문의에게 묻다&gt;<br>남자 산부인과 의사 삶</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro05.jpg" alt="">
+                                <p class="title">&lt;3칼럼니스트에게 묻다&gt;<br>우리는 왜 나쁜<br>남자.여자에게 빠질까?</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro06.jpg" alt="">
+                                <p class="title">&lt;인문학 교수에게 묻다&gt;<br>21세기가 말하는 양성평등</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro07.jpg" alt="">
+                                <p class="title">&lt;양호선생님께 묻다&gt;<br>청소년기 성관계가<br>잘못된 것일까?</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro08.jpg" alt="">
+                                <p class="title">&lt;부부상담사에게 묻다&gt;<br>우리는 왜<br>상담해야 하는가</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro09.jpg" alt="">
+                                <p class="title">&lt;성전문가에게 묻다&gt;<br>우리나라 성교육의 현시점</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro10.jpg" alt="">
+                                <p class="title">&lt;성전문 상담가에게 묻다&gt;<br>성전문 상담소에는<br>어떤 사람들이 가야 할까?</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro11.jpg" alt="">
+                                <p class="title">&lt;포토그래퍼에게&gt;<br>누드사진을 찍는 이유</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="sub_pi.html">
+                                <img src="../images/article/Article_main_image/Main_Pro12.jpg" alt="">
+                                <p class="title">&lt;애견전문의에게 묻다&gt;<br>중성화 수술에 대한<br>그들의 의견</p>
+                                <p class="hover">PROFESSIONAL INTERVIEW</p>
+                                <div class="border"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//pro  -->
+            
+            </div>
+            <!-- //storyTab -->
+    
+        </div>
+        <!--//area -->
+    
+
+    <section id="Most_cntArea">
+        <div id="Most_cnt">
+            <h2>MOST LIKE ARTICLE</h2>
+            <ul class="Most_cont clearfix">
+                <li>
+                    <a href="sub_nb.html" class="clearfix">
+                        <img src="../images/article/MostLike_image/MostLike_img01.jpg" alt="">
+                        <p class="clearfix">
+                            <span class="num">1</span>
+                            <span class="text">다음주 나의 아내가<br>바람을 피웁니다.</span>
+                        </p>
+                        <div class="border"><p>NANA & BANANA</p></div>  
+                    </a>
+                </li>
+                <li>
+                    <a href="sub_wh.html" class="clearfix">
+                        <img src="../images/article/MostLike_image/MostLike_img02.jpg" alt="">
+                        <p class="clearfix">
+                            <span class="num">2</span>
+                            <span class="text">그는 당신에게<br>반하지 않았다.</span>
+                        </p>
+                        <div class="border"><p>WEEKLY HOT ISSUE</p></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="sub_pi.html" class="clearfix">
+                        <img src="../images/article/MostLike_image/MostLike_img03.jpg" alt="">
+                    <p class="clearfix">
+                        <span class="num">3</span>
+                        <span class="text">당신은 피임에대해<br>얼마나 알고 있는가</span>
+                    </p>
+                    <div class="border"><p>PROFESSIONAL</p></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="sub_nb.html" class="clearfix">
+                        <img src="../images/article/MostLike_image/MostLike_img04.jpg" alt="">
+                        <p class="clearfix">
+                            <span class="num">4</span>
+                            <span class="text">우리 관계의 문제는<br>누구에게 있을까?</span>
+                        </p>
+                        <div class="border"><p>NANA & BANANA</p></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- //Most_cnt -->
+
+
+    <footer id="footer">
+        <div class="hf_wrap p_r clearfix">
+            <div class="footer_logo p_a">
+                <h1><a href=""><img src="../images/common/footer_logo.png" alt="노멀"></a></h1>
+                <p>Our site is not an adult site but an adult magazine site.</p>
+            </div>
+            <div class="creators f_l">
+                <h6>CREATORS</h6>
+                <ul>
+                    <li>sohi</li>
+                    <li>piggyfly</li>
+                    <li>wjsdud248</li>
+                </ul>
+            </div>
+            <div class="sns f_r">
+                <ul class="clearfix">
+                    <li class="twitter"><a href=""></a></li>
+                    <li class="instagram"><a href=""></a></li>
+                    <li class="youtube"><a href=""></a></li>
+                    <li class="facebook"><a href=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <a class="move_top" href="#"><span class="blind">맨 위로 가기</span></a>
+</body>
+
+</html>

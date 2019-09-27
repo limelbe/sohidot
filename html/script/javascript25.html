@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title> new document </title>
+    <script>
+        var t="<ul>";
+        
+        for(var i=0; i<=5; i++){
+            t+="<li>" + i + "</li>"
+        }
+
+        t+="</ul>";
+
+        console.log(i);
+        console.log(t);
+
+        document.write(t);
+        document.write("<br>");
+
+
+        //for 구문으로 합 구하기
+        var sum = 0;
+
+        for(var n=0; n<=5; n++){
+            sum += n;
+        }
+
+        console.log(sum);
+
+        document.write("1부터 " + (n-1) + "까지의 합은 " + sum + "입니다.");
+        document.write("<br><br>");
+
+
+        //for 구문으로 연도선택 만들기
+        var result = "<select>";
+
+        for (var y=2000; y>=1950; y--){
+            result += '<option value="' + y + '">' + y + '</option>';
+        }
+
+        result += "</select>";
+        console.log(result);
+        document.write(result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

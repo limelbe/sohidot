@@ -525,7 +525,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">배열 사용 방법1</div>
 						<div class="panel-body">
-							var arr1 = new Array(); <br>
+							var arr1 = new Array(3); //괄호 안에 숫자는 몇 개의 데이터를 저장할 것 인지를 의미<br>
 							arr1[0] = 1; <br>
 							arr1[2] = "Hello"; <br>
 							arr1[3] = true;
@@ -540,7 +540,16 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">배열 사용 방법3</div>
 						<div class="panel-body">
-							var arr3 = [1, "Hello", true];
+							var arr3 = [];<br>
+							arr3[0] = 1;<br>
+							arr3[1] = "Hello";<br>
+							arr3[2] = true;
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">배열 사용 방법4</div>
+						<div class="panel-body">
+							var arr4 = [1, "Hello", true];
 						</div>
 					</div>
 
@@ -1433,7 +1442,7 @@
 						</div>
 					</div>
 
-					<h4>4계절 <a href="javascript19.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+					<h4>else if문 - 4계절 <a href="javascript19.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
 <pre><code class="language-markup line-numbers">&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
 &lt;head&gt;
@@ -1443,7 +1452,9 @@
 	&lt;script&gt;
 		var mon = prompt("현재는 몇 월입니까?","0");
 
-		if(mon&gt;=6 && mon&lt;=8){
+		if(mon&gt;12){
+			document.write("1년은 1월부터 12월까지 있습니다 :)")
+		}else if(mon&gt;=6 && mon&lt;=8){
 			document.write("여행가기 좋은 여름이네요!");
 		} else if(mon&gt;=9 && mon&lt;=11){
 			document.write("독서의 계절 가을이네요!");
@@ -1456,6 +1467,38 @@
 &lt;/head&gt;
 &lt;body&gt;
 	
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+					<h4>else if문 - 통화연결 <a href="javascript23.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Javascript23&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;script&gt;
+    var choice = prompt("전화 연결 중입니다. 1번을 선택하시면 통화 연결, 2번을 선택하시면 문자 연결, 3번을 선택하시면 영상 통화 연걸입니다.", "0");
+
+    console.log(choice);
+    console.log(typeof choice);
+    
+    var result;
+
+    if (choice=="1"){
+        result = "잠시 후 통화가 연결됩니다.";
+    } else if (choice=="2") {
+        result ="잠시 후 문자가 연결됩니다.";
+    } else if (choice=="3") {
+        result = "잠시 후 영상 통화가 연결됩니다.";
+    } else {
+        result ="잘못 선택하셨습니다.";
+    }
+    document.write(result);
+&lt;/script&gt;
+&lt;body&gt;
+    
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
@@ -1496,13 +1539,13 @@
 						<div class="panel-body">
 							var 변수 = 초기값;<br>
 							switch(변수){<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;case 값1: 실행코드1;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;case 값1: 변수값=값1일 때 실행코드1;<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;case 값2: 실행코드2;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;case 값2: 변수값=값2일 때 실행코드2;<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;case 값3: 실행코드3;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;case 값3: 변수값=값3일 때 실행코드3;<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;default: 실행코드4;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;default: 변수값과 같은 값이 없을 때 실행코드4;<br>
 							} 
 						</div>
 					</div>
@@ -1587,15 +1630,34 @@
 						<div class="panel-body">
 							var 변수 = 초기값;<br>
 							while(조건식){<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;//실행코드;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;//조건이 true(참)인 동안 실행할 코드;<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;//증감식;<br>
 							}
 						</div>
 					</div>
 					<h4>while문 <a href="javascript22.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
-<pre><code class="language-markup line-numbers">
-	
-</code></pre>
+<pre><code class="language-markup line-numbers">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Javascript22&lt;/title&gt;
+    &lt;script&gt;
+        var result = " ";
+
+        var i=1;
+        while(i&lt;=10){
+            result += "&lt;p&gt;" + i + ") 지금은 2교시입니다.&lt;/p&gt;";
+            i++;
+        }
+
+        console.log(result);
+        document.write(result);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 					<h3 id="intro7_2" class="page-header">do ~ while문</h3>
 					<p>while문의 경우에는 조건식의 만족 여부를 먼저 검사한 후 중괄호에 있는 코드의 실행여부를 결정하지만, do while문은 중괄호에 있는 코드를 먼저 실행하고 조건식을 검사합니다.</p>
@@ -1692,37 +1754,84 @@
 				<div class="bs-docs-section">
 					<h2 id="intro9" class="page-header">객체</h2>
 					<p class="lead">객체는 데이터와 연산 작업을 담고 있는 <strong>기본적인 기능</strong>입니다.</p>
+					<p>우리 주변의 모든 사물들을 객체라고 합니다. 객체를 구성하는 요소로는 속성(Property)과 기능(Method)이 있습니다.</p>
+					<h3 id="intro6_3" class="page-header">객체의 기본형</h3>
+					<div class="panel panel-default">
+						<div class="panel-heading">객체의 기본형</div>
+						<div class="panel-body">
+							객체.메서드();&nbsp;&nbsp;&nbsp;&nbsp;object.method();<br>
+							객체.속성 또는 객체.속성=값&nbsp;&nbsp;&nbsp;&nbsp;object.porperty;
+						</div>
+					</div>
+					<h3 id="intro6_3" class="page-header">객체 선언</h3>
+					<div class="panel panel-default">
+						<div class="panel-heading">객체 사용 방법</div>
+						<div class="panel-body">
+							1) new 생성자(키워드)를 이용 - 뒤에 작성한 객체명은 반드시 대문자로 시작<br>
+							2) 리터럴 방식: 기본 표현 방식
+						</div>
+					</div>
+
+
 				</div>
 				<!-- //Introduction -->
 
 				<!-- Introduction -->
 				<div class="bs-docs-section">
 					<h2 id="intro10" class="page-header">내장객체</h2>
-					<p class="lead">자바스크립트는</p>
+					<p class="lead">숫자객체, 문자객체, 수학객체, 날짜객체, 배열객체, 정규표현객체(제이쿼리)</p>
+
+					<h3 id="intro10_1" class="page-header">숫자 객체</h3>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							
+						</div>
+					</div>
+					<h4>숫자 객체 <a href="javascript24.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers"></code></pre>
+
+					<h3 id="intro10_2" class="page-header">수학 객체</h3>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							
+						</div>
+					</div>
+					<h4>수학 객체 <a href="javascript24.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers"></code></pre>
+
+					<h3 id="intro10_2" class="page-header">날짜 객체</h3>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							
+						</div>
+					</div>
+					<h4>현재 시간 <a href="javascript24.html"><button type="button" class="btn btn-default btn-xs">View</button></a></h4>
+<pre><code class="language-markup line-numbers"></code></pre>
+
+					
 				</div>
 				<!-- //Introduction -->
 
 				<!-- Introduction -->
 				<div class="bs-docs-section">
 					<h2 id="intro11" class="page-header">브라우저객체</h2>
-					<p class="lead">자바스크립트는</p>
+					<p class="lead">window, documnet, location, history, navigator, ...</p>
 				</div>
 				<!-- //Introduction -->
 
 				<!-- Introduction -->
 				<div class="bs-docs-section">
 					<h2 id="intro12" class="page-header">문서객체</h2>
-					<p class="lead">자바스크립트는</p>
+					<p class="lead">제이쿼리</p>
 				</div>
 				<!-- //Introduction -->
 
 				<!-- Introduction -->
-				<div class="bs-docs-section">
+			<!-- 	<div class="bs-docs-section">
 					<h2 id="intro13" class="page-header">이벤트</h2>
 					<p class="lead">자바스크립트는</p>
-				</div>
+				</div> -->
 				<!-- //Introduction -->
-
 
 			</div>
 			<!-- //col-md-9 -->
